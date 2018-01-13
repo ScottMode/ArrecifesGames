@@ -20,7 +20,7 @@ BasicGame.Preloader.prototype = {
         loading_txt.fontSize = 50;
         loading_txt.align = 'center';*/
         
-        var loading_txt = this.game.add.text(this.world.centerX, this.world.centerY, "Loading...", {font:"40px Zombie", fill:"#FFFFFF"});
+        var loading_txt = this.game.add.text(this.world.centerX, this.world.centerY, "Loading...", {font:"40px ZombieChecklist", fill:"#FFFFFF"});
         loading_txt.anchor.setTo(0.5);
         loading_txt.fill = '#FFFFFF';
         loading_txt.fontSize = 50;

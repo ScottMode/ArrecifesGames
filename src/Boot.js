@@ -44,7 +44,7 @@ BasicGame.Boot.prototype = {
         /*this.load.bitmapFont('walter', 'assets/walter_0.png', 'assets/walter.fnt');
         this.load.script('webfont', '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js');*/
         
-        
+        this.game.add.text(0, 0, "hack", {font:"1px ZombieChecklist", fill:"#FFFFFF"});
     },
 
     create: function () {

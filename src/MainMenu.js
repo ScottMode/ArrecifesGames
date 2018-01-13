@@ -65,8 +65,11 @@ BasicGame.MainMenu.prototype = {
         clickButton.scale.setTo(0.5);
         clickButton.input.useHandCursor = true;
         clickButton.angle -= 90;
+        clickButton_txt = this.game.add.text(clickButton.x, clickButton.y, "Iniciar", {font:"55px ZombieChecklist", fill:"#000000"});
+        clickButton_txt.anchor.setTo(0.5);
+        clickButton_txt.align = 'center';
         
-        hand = this.add.image(this.world.centerX, this.world.centerY  + 400, 'Mano');
+        hand = this.add.image(this.world.centerX, this.world.centerY  + 420, 'Mano');
         hand.anchor.setTo(0.5);
         hand.scale.setTo(0.2);
         
