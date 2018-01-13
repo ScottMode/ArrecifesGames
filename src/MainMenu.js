@@ -3,12 +3,20 @@
 var menuBackground = null;
 
 //TEXT
-var playButton = null;
-var playButton_txt = null;
-var instructions_txt = null;
-var title_txt = null;
-var name_txt = null;
-var level_txt = null;
+var easyButton = null;
+var easyButton_txt = null;
+var mediumButton = null;
+var mediumButton_txt = null;
+var hardButton = null;
+var hardButton_txt = null;
+
+var clickButton = null;
+var clickButton_txt = null;
+var hand = null;
+
+var fish = null;
+var crab = null;
+var squid = null;
 
 BasicGame.MainMenu = function (game) {
     
@@ -17,102 +25,85 @@ BasicGame.MainMenu = function (game) {
 BasicGame.MainMenu.prototype = {
     
     create: function () {
-        menuBackground = this.add.image(this.world.centerX, this.world.centerY, 'background');
-        menuBackground.anchor.setTo(0.5);
-
-        if (gm.music == null){
-            gm.music = this.add.audio('music');
-            gm.music.loop = true;
-		    gm.music.play();
-            
-            
-            gm.enemyDieSound = this.add.audio('enemyDieSound');
-            gm.fireSound = this.add.audio('fireSound');
-        }
         
-        var title;
-        switch (PLAYER_DATA.DIES){
-            case 0:
-                title = "Don't Die";
-                break;
-            case 1:
-                title = "Don't Die Again";
-                break;
-            case 2:
-                title = "Stop Dying";
-                break;
-            case 3:
-                title = "Ok, You Can Die A Little";
-                break;
-            case 4:
-                title = "Don't Die Too Much";
-                break;
-            case 5:
-                title = "You're Bad Stop Dying";
-                break;
-            case 6:
-                title = "Get A Grip";
-                break;
-            case 7:
-                title = "Last Chance";
-                break;
-            case 8:
-                title = "Told You To Stop Dying";
-                break;
-        }
-        title_txt = this.add.text(this.world.centerX, this.world.centerY - 100, title);
+        menuBackground = this.add.image(this.world.centerX, this.world.centerY, 'MainMenuBackground');
+        menuBackground.anchor.setTo(0.5);
+        
+        //Difficulty buttons + text
+        var easyButton = thisGame.add.button(thisGame.world.centerX - 500, 550, 'Papel2', setEasy, this);
+        easyButton.anchor.setTo(0.5);
+        easyButton.scale.setTo(0.2);
+        easyButton.input.useHandCursor = true;
+        //e text
+        
+        //Difficulty buttons + text
+        var mediumButton = thisGame.add.button(thisGame.world.centerX, 720, 'Papel2', setMedium, this);
+        mediumButton.anchor.setTo(0.5);
+        mediumButton.scale.setTo(0.2);
+        mediumButton.input.useHandCursor = true;
+        
+        //Difficulty buttons + text
+        var hardButton = thisGame.add.button(thisGame.world.centerX + 500, 550, 'Papel2', setHard, this);
+        hardButton.anchor.setTo(0.5);
+        hardButton.scale.setTo(0.2);
+        hardButton.input.useHandCursor = true;
+        
+        
+        fish = this.add.image(easyButton.x, easyButton.y, 'Pezrojo');
+        fish.anchor.setTo(0.5);
+        fish.scale.setTo(0.15);
+        crab = this.add.image(mediumButton.x, mediumButton.y, 'Cangre2');
+        crab.anchor.setTo(0.5);
+        crab.scale.setTo(0.15);
+        squid = this.add.image(hardButton.x, hardButton.y, 'Calamar2');
+        squid.anchor.setTo(0.5);
+        squid.scale.setTo(0.08);
+        
+        //Hand
+        var clickButton = thisGame.add.button(thisGame.world.centerX, this.world.centerY + 350, 'Papel4', startGame, this);
+        clickButton.anchor.setTo(0.5);
+        clickButton.scale.setTo(0.5);
+        clickButton.input.useHandCursor = true;
+        clickButton.angle -= 90;
+        
+        hand = this.add.image(this.world.centerX, this.world.centerY  + 400, 'Mano');
+        hand.anchor.setTo(0.5);
+        hand.scale.setTo(0.2);
+        
+        
+        /*title_txt = this.add.text(this.world.centerX, this.world.centerY - 100, title);
         title_txt.anchor.setTo(0.5);
         title_txt.fill = '#FFFFFF';
         title_txt.font = 'Revalia';
         title_txt.fontSize = 50;
-        title_txt.align = 'center';
-        
-        var levelText = "Level " + PLAYER_DATA.LEVEL;
-        level_txt = this.add.text(20, 20, levelText);
-        level_txt.anchor.setTo(0, 0);
-        level_txt.fill = '#FFFFFF';
-        level_txt.font = 'Revalia';
-        level_txt.fontSize = 30;
-        level_txt.align = 'left';
-        
-        name_txt = this.add.text(20, this.world.height - 40, "Nelson Scott");
-        name_txt.anchor.setTo(0, 0);
-        name_txt.fill = '#FFFFFF';
-        name_txt.font = 'Revalia';
-        name_txt.fontSize = 10;
-        name_txt.align = 'left';
-        
-        if (PLAYER_DATA.DIES < 8){
-            playButton = this.add.button(-200 * gm.scaleP, this.world.centerY + 50 * gm.scaleP, 'button', nextMenu, this, 1, 0, 2);
-            playButton_txt = this.add.bitmapText(0, 0, 'walter', "Play", 50 * gm.scaleP);
-            setButton(playButton, playButton_txt, 50, "nextSound");
-            this.add.tween(playButton).to( { x: this.world.centerX }, 1000, Phaser.Easing.Bounce.Out, true);
-            this.add.tween(playButton_txt).to( { x: this.world.centerX - (playButton_txt.width / 2) }, 1000, Phaser.Easing.Bounce.Out, true);
-
-            instructions_txt = this.add.text(this.world.centerX, this.world.centerY + 200, "WASD to Move.\nShoot with mouse.\nLevel up to kill all bad guys and win.\nDie a lot but don't die too much.");
-            instructions_txt.anchor.setTo(0.5);
-            instructions_txt.fill = '#FFFFFF';
-            instructions_txt.font = 'Revalia';
-            instructions_txt.fontSize = 20;
-            instructions_txt.align = 'center';
-        }
-        else{
-            gm.music.stop();
-        }
-        
-        //PLAYER DATA to zero
-        ResetData();
+        title_txt.align = 'center';*/
     },
     
     update: function () {
         
-        
+        //use to find button positions
+        console.log("x: " + thisGame.input.mousePointer.x + ", y: " + thisGame.input.mousePointer.y);
         
     }
 };
 
-
-function nextMenu()
+function setEasy()
 {
-    goToState('Game');
+    PLAYER_DATA.DIFFICULTY = 1;
+    
+}
+
+function setMedium()
+{
+    PLAYER_DATA.DIFFICULTY = 2;
+}
+
+function setHard()
+{
+    PLAYER_DATA.DIFFICULTY = 3;
+}
+
+function startGame()
+{
+    thisGame.state.start('GameA');
 }

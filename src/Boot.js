@@ -43,7 +43,8 @@ BasicGame.Boot.prototype = {
         //this.load.image('preloaderBar', 'images/preloader_bar.png');
         /*this.load.bitmapFont('walter', 'assets/walter_0.png', 'assets/walter.fnt');
         this.load.script('webfont', '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js');*/
-
+        
+        
     },
 
     create: function () {

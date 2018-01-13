@@ -12,6 +12,29 @@ BasicGame.Preloader = function (game) {
 BasicGame.Preloader.prototype = {
 
 	preload: function () {
+        
+        /*loading_txt = this.add.text(this.world.centerX, this.world.centerY, 'Loading...');
+        loading_txt.anchor.setTo(0.5);
+        loading_txt.fill = '#FFFFFF';
+        loading_txt.font = 'Zombie';
+        loading_txt.fontSize = 50;
+        loading_txt.align = 'center';*/
+        
+        var loading_txt = this.game.add.text(this.world.centerX, this.world.centerY, "Loading...", {font:"40px Zombie", fill:"#FFFFFF"});
+        loading_txt.anchor.setTo(0.5);
+        loading_txt.fill = '#FFFFFF';
+        loading_txt.fontSize = 50;
+        loading_txt.align = 'center';
+        
+        //Main menu assets
+        this.load.image('MainMenuBackground', 'assets/MainMenu/Links/logodos.png');
+        this.load.image('Papel2', 'assets/MainMenu/Links/papel2.png');
+        this.load.image('Papel4', 'assets/MainMenu/Links/papel4.png');
+        this.load.image('Mano', 'assets/MainMenu/Links/mano.png');
+        this.load.image('Calamar2', 'assets/MainMenu/Links/calamar2.png');
+        this.load.image('Cangre2', 'assets/MainMenu/Links/cangre2.png');
+        this.load.image('Pezrojo', 'assets/MainMenu/Links/pezrojo.png');
+        
 
 		//this.background = this.add.sprite(0, 0, 'preloaderBackground');
 		//this.preloadBar = this.add.sprite(300, 400, 'preloaderBar');
@@ -20,7 +43,7 @@ BasicGame.Preloader.prototype = {
 		
 		//this.load.image('titlepage', 'images/title.jpg');
 		//this.load.atlas('playButton', 'images/play_button.png', 'images/play_button.json');
-		this.load.audio('music', ['assets/music.ogg', 'assets/music.m4a']);
+		/*this.load.audio('music', ['assets/music.ogg', 'assets/music.m4a']);
         this.load.audio('fireSound', ['assets/fireSound.wav']);
         this.load.audio('enemyDieSound', ['assets/enemyDie.wav']);
         this.load.spritesheet('button', 'assets/button.png', 579 / 3, 89);
@@ -31,7 +54,7 @@ BasicGame.Preloader.prototype = {
         this.load.spritesheet('enemyMove', 'assets/enemyMove.png', 64, 64);
         
         //other images
-        this.load.image('background', 'assets/background.jpg');
+        this.load.image('background', 'assets/background.jpg');*/
         
         
 		//this.load.bitmapFont('caslon', 'fonts/caslon.png', 'fonts/caslon.xml');
@@ -57,7 +80,7 @@ BasicGame.Preloader.prototype = {
 		//	If you don't have any music in your game then put the game.state.start line into the create function and delete
 		//	the update function completely.
 		
-		if (this.cache.isSoundDecoded('music') && this.ready == false)
+		if (this.ready == false)
 		{
 			this.ready = true;
 			this.state.start('MainMenu');

@@ -2,32 +2,15 @@
 
 var stateTarget = '';
 
-var ENEMY_DATA = Object.seal({
-    MAX_HEALTH: 2,
-    SPEED: 220,
-    MAX_ENEMIES: 3,
-    ALIVE_COUNT: 0
-});
-    
+
 var PLAYER_DATA = {
-    LEVEL: 1,
-    FIRE_RATE: 250,
-    SPEED: 50,
-    DIES: 0
+    SCORE: 0,
+    DIFFICULTY: 1 //1-3
 };
 
 function ResetData()
 {
-    ENEMY_DATA.MAX_HEALTH = 1;
-    ENEMY_DATA.SPEED = 220;
-    ENEMY_DATA.MAX_ENEMIES = 3;
-    ENEMY_DATA.ALIVE_COUNT = 0;
-    
-    PLAYER_DATA.FIRE_RATE = 300 - (PLAYER_DATA.LEVEL * 5);
-    if (PLAYER_DATA.FIRE_RATE < 0){
-        PLAYER_DATA.FIRE_RATE = 20;
-    }
-    PLAYER_DATA.SPEED = 50 + (PLAYER_DATA.LEVEL * 5);
+    PLAYER_DATA.SCORE = 0;
 }
 
 BasicGame.Manager = function (game) {
