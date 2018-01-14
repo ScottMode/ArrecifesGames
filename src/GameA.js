@@ -29,8 +29,12 @@ BasicGame.GameA.prototype = {
 
 	create: function () {
         
-        menuBackground = this.add.image(this.world.centerX, this.world.centerY, 'background');
-        menuBackground.anchor.setTo(0.5);
+        var levelBackground = this.add.image(this.world.centerX, this.world.centerY, 'GameABackground');
+        levelBackground.anchor.setTo(0.5);
+        
+        var pool = this.add.image(this.world.centerX, this.world.centerY + 300, 'Pool');
+        pool.anchor.setTo(0.5);
+        pool.scale.setTo(0.5, 0.5);
         
         //Fires
         /*fires = this.add.group();

@@ -1,0 +1,551 @@
+Package Report
+
+-----------------------------------------------------------------------------
+Document:
+Name: bloqueador.ai
+Color Mode: RGB color
+Color Profile: sRGB IEC61966-2.1
+Ruler Units: pixels
+Artboard Dimensions: 1920 px x 1080 px
+Show Images in Outline Mode: OFF
+Highlight Substituted Fonts: OFF
+Highlight Substituted Glyphs: OFF
+Preserve Text Editability
+Simulate Colored Paper: OFF
+
+-----------------------------------------------------------------------------
+Spot Color Objects:
+
+-----------------------------------------------------------------------------
+Missing Fonts:NONE
+
+-----------------------------------------------------------------------------
+Protected Fonts that were not packaged:NONE
+
+-----------------------------------------------------------------------------
+Fonts:
+Moon Flower Bold (TrueType)
+ZombieChecklist (TrueType)
+
+-----------------------------------------------------------------------------
+Embedded Fonts:
+NONE
+
+-----------------------------------------------------------------------------
+Missing Links:
+NONE
+
+-----------------------------------------------------------------------------
+Linked Images:
+
+/Users/NellyCuellar/Desktop/escenarios/basura_Folder/Links/papel4.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1033K, 443 by 597 pixels
+Dimensions: 176.162 by 105.781 points 
+Resolution: 181.061 by 406.347 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/fondoazulliso.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 8100K, 1920 by 1080 pixels
+Dimensions: 1920 by 1080 points 
+Resolution: 72 by 72 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/pezespadita.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 10661K, 1723 by 1584 pixels
+Dimensions: 221.692 by 219.382 points 
+Resolution: 559.588 by 519.861 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/escenarios/basura_Folder/Links/papel4.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1033K, 443 by 597 pixels
+Dimensions: 312.109 by 152.9 points 
+Resolution: 102.195 by 281.126 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/monticulo2.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1327K, 608 by 559 pixels
+Dimensions: 574 by 527.74 points 
+Resolution: 76.265 by 76.265 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/fish1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1244K, 650 by 490 pixels
+Dimensions: 58.367 by 44 points 
+Resolution: 801.818 by 801.818 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/fish12.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1244K, 650 by 490 pixels
+Dimensions: 48 by 30.185 points 
+Resolution: 975 by 1168.807 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/ninoconbloqueador.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2420K, 660 by 939 pixels
+Dimensions: 159 by 227 points 
+Resolution: 298.868 by 297.833 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/monticulo3.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1327K, 608 by 559 pixels
+Dimensions: 236.036 by 217.013 points 
+Resolution: 185.463 by 185.463 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/sun.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1244K, 650 by 490 pixels
+Dimensions: 280.287 by 211.294 points 
+Resolution: 166.971 by 166.971 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/sunlight.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 3591K, 944 by 974 pixels
+Dimensions: 407.064 by 420 points 
+Resolution: 166.971 by 166.971 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/seahorse1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1430K, 475 by 771 pixels
+Dimensions: 52.32 by 67.2 points 
+Resolution: 653.67 by 826.071 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/purple2.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 5625K, 1200 by 1200 pixels
+Dimensions: 127 by 127 points 
+Resolution: 680.315 by 680.315 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/fish12.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1244K, 650 by 490 pixels
+Dimensions: 61.02 by 46 points 
+Resolution: 766.957 by 766.957 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/fish12.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1244K, 650 by 490 pixels
+Dimensions: 48 by 30.185 points 
+Resolution: 975 by 1168.807 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/fish1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1244K, 650 by 490 pixels
+Dimensions: 35.018 by 26.398 points 
+Resolution: 1336.456 by 1336.456 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/fish12.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1244K, 650 by 490 pixels
+Dimensions: 61.02 by 46 points 
+Resolution: 766.957 by 766.957 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/fish1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1244K, 650 by 490 pixels
+Dimensions: 43.457 by 32.76 points 
+Resolution: 1076.923 by 1076.923 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/fish1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1244K, 650 by 490 pixels
+Dimensions: 44.16 by 36 points 
+Resolution: 1059.783 by 980 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/fish1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1244K, 650 by 490 pixels
+Dimensions: 55.68 by 46.08 points 
+Resolution: 840.517 by 765.625 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/fish1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1244K, 650 by 490 pixels
+Dimensions: 73.44 by 60.48 points 
+Resolution: 637.255 by 583.333 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/piedra1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 10425K, 2224 by 1200 pixels
+Dimensions: 111.61 by 93.721 points 
+Resolution: 1434.706 by 921.888 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/sun.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1244K, 650 by 490 pixels
+Dimensions: 236.242 by 178.09 points 
+Resolution: 198.102 by 198.102 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/pezespadita.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 10661K, 1723 by 1584 pixels
+Dimensions: 262.68 by 254.092 points 
+Resolution: 472.27 by 448.846 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/pezespadita.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 10661K, 1723 by 1584 pixels
+Dimensions: 262.68 by 254.092 points 
+Resolution: 472.27 by 448.846 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/duo.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2176K, 644 by 865 pixels
+Dimensions: 76.36 by 73.44 points 
+Resolution: 607.229 by 848.039 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/duo.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2176K, 644 by 865 pixels
+Dimensions: 96.64 by 98.694 points 
+Resolution: 479.801 by 631.042 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/escenarios/basura_Folder/Links/maskin3.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 402K, 428 by 241 pixels
+Dimensions: 72.813 by 41 points 
+Resolution: 423.22 by 423.22 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/escenarios/basura_Folder/Links/papel4.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1033K, 443 by 597 pixels
+Dimensions: 260.671 by 188.052 points 
+Resolution: 122.361 by 228.575 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/sunlight.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 3591K, 944 by 974 pixels
+Dimensions: 343.097 by 354 points 
+Resolution: 198.102 by 198.102 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/duo.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2176K, 644 by 865 pixels
+Dimensions: 110.556 by 117.356 points 
+Resolution: 419.407 by 530.693 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/duo.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2176K, 644 by 865 pixels
+Dimensions: 96.478 by 98.694 points 
+Resolution: 480.608 by 631.042 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/maskin1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1587K, 850 by 478 pixels
+Dimensions: 188.494 by 106 points 
+Resolution: 324.679 by 324.679 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/monticulo3.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1327K, 608 by 559 pixels
+Dimensions: 360 by 330.987 points 
+Resolution: 121.6 by 121.6 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/monticulo2.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1327K, 608 by 559 pixels
+Dimensions: 608 by 559 points 
+Resolution: 72 by 72 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/escenarios/basura_Folder/Links/maskin.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 8100K, 1920 by 1080 pixels
+Dimensions: 1167.427 by 773.601 points 
+Resolution: 118.414 by 100.517 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/duo.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2176K, 644 by 865 pixels
+Dimensions: 96.895 by 98.694 points 
+Resolution: 478.537 by 631.042 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/duo.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2176K, 644 by 865 pixels
+Dimensions: 96.68 by 98.694 points 
+Resolution: 479.603 by 631.042 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/pezespadita.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 10661K, 1723 by 1584 pixels
+Dimensions: 164.932 by 163.213 points 
+Resolution: 752.165 by 698.766 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/piedra1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 10425K, 2224 by 1200 pixels
+Dimensions: 144.56 by 78 points 
+Resolution: 1107.692 by 1107.692 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/softpink2.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 5625K, 1200 by 1200 pixels
+Dimensions: 162 by 162 points 
+Resolution: 533.333 by 533.333 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/alce2.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 5625K, 1200 by 1200 pixels
+Dimensions: 167.755 by 167.755 points 
+Resolution: 515.038 by 515.038 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/alce2.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 5625K, 1200 by 1200 pixels
+Dimensions: 167.755 by 167.755 points 
+Resolution: 515.038 by 515.038 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/alberca.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 4798K, 1459 by 842 pixels
+Dimensions: 786.467 by 343.071 points 
+Resolution: 133.57 by 176.71 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/fish8.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1244K, 650 by 490 pixels
+Dimensions: 113.667 by 98.42 points 
+Resolution: 411.728 by 358.464 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/blue3.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 5625K, 1200 by 1200 pixels
+Dimensions: 169.36 by 168 points 
+Resolution: 510.156 by 514.286 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/ninosinbloqueador.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2420K, 660 by 939 pixels
+Dimensions: 157.444 by 226.32 points 
+Resolution: 301.821 by 298.727 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/textura6.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 6090K, 2030 by 768 pixels
+Dimensions: 238.08 by 76.8 points 
+Resolution: 613.911 by 720 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/arrecife/alberca.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 4798K, 1459 by 842 pixels
+Dimensions: 786.467 by 355.68 points 
+Resolution: 133.57 by 170.445 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/duo.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2176K, 644 by 865 pixels
+Dimensions: 162.965 by 173.337 points 
+Resolution: 284.528 by 359.301 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/monticulo3.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1327K, 608 by 559 pixels
+Dimensions: 360 by 330.987 points 
+Resolution: 121.6 by 121.6 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/duo.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2176K, 644 by 865 pixels
+Dimensions: 112.57 by 108.36 points 
+Resolution: 411.903 by 574.752 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/pezespadita.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 10661K, 1723 by 1584 pixels
+Dimensions: 257.507 by 254.092 points 
+Resolution: 481.757 by 448.846 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/duo.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2176K, 644 by 865 pixels
+Dimensions: 91.604 by 98.694 points 
+Resolution: 506.178 by 631.042 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/escenarios/basura_Folder/Links/papel4.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1033K, 443 by 597 pixels
+Dimensions: 171.125 by 102.179 points 
+Resolution: 186.39 by 420.674 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/duo.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2176K, 644 by 865 pixels
+Dimensions: 142.103 by 145.773 points 
+Resolution: 326.298 by 427.241 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/duo.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2176K, 644 by 865 pixels
+Dimensions: 141.978 by 145.773 points 
+Resolution: 326.585 by 427.241 pixels per inch

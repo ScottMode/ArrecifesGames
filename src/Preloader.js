@@ -35,6 +35,10 @@ BasicGame.Preloader.prototype = {
         this.load.image('Cangre2', 'assets/MainMenu/Links/cangre2.png');
         this.load.image('Pezrojo', 'assets/MainMenu/Links/pezrojo.png');
         
+        //Game A
+        this.load.image('GameABackground', 'assets/GameA/Links/background.png');
+        this.load.image('Pool', 'assets/GameA/Links/alberca.png');
+        
 
 		//this.background = this.add.sprite(0, 0, 'preloaderBackground');
 		//this.preloadBar = this.add.sprite(300, 400, 'preloaderBar');
