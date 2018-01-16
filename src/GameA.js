@@ -1,5 +1,21 @@
 "use strict";
 
+//Gameplay logic
+var gameState = "intro";
+var gameTimer = 0;
+
+//Player
+var divingBoard;
+var player;
+var playerSunscreen;
+
+//UI
+var scoreTab;
+var scoreTab_txt;
+var timerTab;
+var timeTab_txt;
+var timerBar;
+
 BasicGame.GameA = function (game) {
 
 	//	When a State is added to Phaser it automatically has the following properties set on it, even if they already exist:
@@ -29,12 +45,35 @@ BasicGame.GameA.prototype = {
 
 	create: function () {
         
+        //Setting
         var levelBackground = this.add.image(this.world.centerX, this.world.centerY, 'GameABackground');
         levelBackground.anchor.setTo(0.5);
         
+        //Pool and diving board
         var pool = this.add.image(this.world.centerX, this.world.centerY + 300, 'Pool');
         pool.anchor.setTo(0.5);
         pool.scale.setTo(0.5, 0.5);
+        var tape = this.add.image(this.world.centerX, this.world.centerY + 130, 'Maskin1');
+        tape.anchor.setTo(0.5);
+        tape.scale.setTo(0.3);
+        divingBoard = this.add.image(this.world.centerX, this.world.centerY, 'Textura6');
+        divingBoard.anchor.setTo(0.5, 0);
+        divingBoard.scale.setTo(0.1, 0.05);
+        
+        //Time bar
+        
+        
+        //Player
+        player = this.add.image(this.world.centerX, divingBoard.y, 'Player');
+        player.anchor.setTo(0.5, 0.85);
+        player.scale.setTo(0.25);
+        
+        playerSunscreen = this.add.image(this.world.centerX, divingBoard.y, 'PlayerSunscreen');
+        playerSunscreen.anchor.setTo(0.5, 0.85);
+        playerSunscreen.scale.setTo(0.25);
+        //playerSunscreen.input.useHandCursor = true;
+        
+        
         
         //Fires
         /*fires = this.add.group();

@@ -40,7 +40,10 @@ BasicGame.Preloader.prototype = {
         //Game A
         this.load.image('GameABackground', 'assets/GameA/Links/background.png');
         this.load.image('Pool', 'assets/GameA/Links/alberca.png');
-        
+        this.load.image('Player', 'assets/GameA/Links/player.png');
+        this.load.image('PlayerSunscreen', 'assets/GameA/Links/playerSunscreen.png');
+        this.load.image('Maskin1', 'assets/GameA/Links/maskin1.png');
+        this.load.image('Textura6', 'assets/GameA/Links/textura6.png');
 
 		//this.background = this.add.sprite(0, 0, 'preloaderBackground');
 		//this.preloadBar = this.add.sprite(300, 400, 'preloaderBar');
