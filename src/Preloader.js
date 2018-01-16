@@ -31,8 +31,10 @@ BasicGame.Preloader.prototype = {
         this.load.image('Papel2', 'assets/MainMenu/Links/papel2.png');
         this.load.image('Papel4', 'assets/MainMenu/Links/papel4.png');
         this.load.image('Mano', 'assets/MainMenu/Links/mano.png');
+        this.load.image('Calamar', 'assets/MainMenu/Links/calamar.png');
         this.load.image('Calamar2', 'assets/MainMenu/Links/calamar2.png');
         this.load.image('Cangre2', 'assets/MainMenu/Links/cangre2.png');
+        this.load.image('Cangre3', 'assets/MainMenu/Links/cangre3.png');
         this.load.image('Pezrojo', 'assets/MainMenu/Links/pezrojo.png');
         
         //Game A
