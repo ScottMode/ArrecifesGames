@@ -1,8 +1,9 @@
 "use strict";
 
 //Gameplay logic
-var gameState = "intro";
+var gameState = "play";
 var gameTimer = 0;
+var playerTaps = 0;
 
 //Player
 var divingBoard;
@@ -45,6 +46,9 @@ BasicGame.GameA.prototype = {
 
 	create: function () {
         
+        //Init
+        playerTaps = 0;
+        
         //Setting
         var levelBackground = this.add.image(this.world.centerX, this.world.centerY, 'GameABackground');
         levelBackground.anchor.setTo(0.5);
@@ -71,9 +75,18 @@ BasicGame.GameA.prototype = {
         playerSunscreen = this.add.image(this.world.centerX, divingBoard.y, 'PlayerSunscreen');
         playerSunscreen.anchor.setTo(0.5, 0.85);
         playerSunscreen.scale.setTo(0.25);
+        playerSunscreen.inputEnabled = true;
+        playerSunscreen.events.onInputDown.add(tappedPlayer, this);
         //playerSunscreen.input.useHandCursor = true;
         
-        
+        //UI
+        scoreTab = this.add.image(this.world.width - 140, 50, 'Papel4');
+        scoreTab.anchor.setTo(0.5);
+        scoreTab.scale.setTo(0.3, 0.5);
+        scoreTab.angle -= 85;
+        scoreTab_txt = this.game.add.text(scoreTab.x - 50, scoreTab.y, "Score ", {font:"30px ZombieChecklist", fill:"#000000"});
+        scoreTab_txt.anchor.setTo(0.5);
+        scoreTab_txt.align = 'left';
         
         //Fires
         /*fires = this.add.group();
@@ -120,3 +133,10 @@ BasicGame.GameA.prototype = {
 	}
 
 };
+
+function tappedPlayer() {
+    if (gameState == "play") {
+        playerTaps++;
+        playerSunscreen.alpha = 1 - (playerTaps / GAME_A.TAPS_NEEDED[PLAYER_DATA.DIFFICULTY]);
+    }
+}

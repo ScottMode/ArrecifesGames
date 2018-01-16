@@ -5,7 +5,12 @@ var stateTarget = '';
 
 var PLAYER_DATA = {
     SCORE: 0,
-    DIFFICULTY: 1 //1-3
+    DIFFICULTY: 0 //0-2
+};
+
+var GAME_A = {
+    TAPS_NEEDED: [10, 15, 20],
+    MAX_TIME: [60, 50, 45]
 };
 
 function ResetData()

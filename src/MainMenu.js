@@ -101,26 +101,23 @@ BasicGame.MainMenu.prototype = {
     
     update: function () {
         
-        //use to find button positions
-        console.log("x: " + thisGame.input.mousePointer.x + ", y: " + thisGame.input.mousePointer.y);
-        
     }
 };
 
 function setEasy()
 {
-    PLAYER_DATA.DIFFICULTY = 1;
+    PLAYER_DATA.DIFFICULTY = 0;
     
 }
 
 function setMedium()
 {
-    PLAYER_DATA.DIFFICULTY = 2;
+    PLAYER_DATA.DIFFICULTY = 1;
 }
 
 function setHard()
 {
-    PLAYER_DATA.DIFFICULTY = 3;
+    PLAYER_DATA.DIFFICULTY = 2;
 }
 
 function startGame()
