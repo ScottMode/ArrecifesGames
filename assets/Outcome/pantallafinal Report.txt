@@ -1,0 +1,111 @@
+Package Report
+
+-----------------------------------------------------------------------------
+Document:
+Name: pantallafinal.ai
+Color Mode: RGB color
+Color Profile: sRGB IEC61966-2.1
+Ruler Units: pixels
+Artboard Dimensions: 1920 px x 1080 px
+Show Images in Outline Mode: OFF
+Highlight Substituted Fonts: OFF
+Highlight Substituted Glyphs: OFF
+Preserve Text Editability
+Simulate Colored Paper: OFF
+
+-----------------------------------------------------------------------------
+Spot Color Objects:
+
+-----------------------------------------------------------------------------
+Missing Fonts:NONE
+
+-----------------------------------------------------------------------------
+Protected Fonts that were not packaged:NONE
+
+-----------------------------------------------------------------------------
+Fonts:
+Moon Flower Bold (TrueType)
+Myriad Pro (OTF)
+ZombieChecklist (TrueType)
+
+-----------------------------------------------------------------------------
+Embedded Fonts:
+NONE
+
+-----------------------------------------------------------------------------
+Missing Links:
+NONE
+
+-----------------------------------------------------------------------------
+Linked Images:
+
+/Users/NellyCuellar/Desktop/reales/cangre2.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 3592K, 1057 by 870 pixels
+Dimensions: 1363.612 by 1122.367 points 
+Resolution: 55.811 by 55.811 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/papel4.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1033K, 443 by 597 pixels
+Dimensions: 312.109 by 152.9 points 
+Resolution: 102.195 by 281.126 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/maskin.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 8100K, 1920 by 1080 pixels
+Dimensions: 808.984 by 365.684 points 
+Resolution: 170.881 by 212.643 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/papel.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 3178K, 775 by 1050 pixels
+Dimensions: 2449.552 by 1808.002 points 
+Resolution: 22.78 by 41.814 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/papel4.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1033K, 443 by 597 pixels
+Dimensions: 312.109 by 152.9 points 
+Resolution: 102.195 by 281.126 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/papel4.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1033K, 443 by 597 pixels
+Dimensions: 312.109 by 152.9 points 
+Resolution: 102.195 by 281.126 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/papel4.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1033K, 443 by 597 pixels
+Dimensions: 176.082 by 105.461 points 
+Resolution: 181.143 by 407.58 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/maskin2.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1587K, 850 by 478 pixels
+Dimensions: 850 by 240 points 
+Resolution: 72 by 143.4 pixels per inch

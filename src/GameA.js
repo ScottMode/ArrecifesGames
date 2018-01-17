@@ -80,13 +80,17 @@ BasicGame.GameA.prototype = {
         //playerSunscreen.input.useHandCursor = true;
         
         //UI
+        //Score
         scoreTab = this.add.image(this.world.width - 140, 50, 'Papel4');
         scoreTab.anchor.setTo(0.5);
         scoreTab.scale.setTo(0.3, 0.5);
         scoreTab.angle -= 85;
-        scoreTab_txt = this.game.add.text(scoreTab.x - 50, scoreTab.y, "Score ", {font:"30px ZombieChecklist", fill:"#000000"});
-        scoreTab_txt.anchor.setTo(0.5);
+        scoreTab_txt = this.game.add.text(scoreTab.x - 90, scoreTab.y + 2, "Score " + PLAYER_DATA.SCORE, {font:"40px Moon Flower Bold", fill:"#000000"});
+        scoreTab_txt.anchor.setTo(0, 0.5);
         scoreTab_txt.align = 'left';
+        
+        //Time
+        
         
         //Fires
         /*fires = this.add.group();
@@ -130,6 +134,8 @@ BasicGame.GameA.prototype = {
 
 	update: function () {
         
+        
+        
 	}
 
 };
@@ -138,5 +144,19 @@ function tappedPlayer() {
     if (gameState == "play") {
         playerTaps++;
         playerSunscreen.alpha = 1 - (playerTaps / GAME_A.TAPS_NEEDED[PLAYER_DATA.DIFFICULTY]);
+        
+        //Add score
+        addScore(GAME_A.TAP_AWARD[PLAYER_DATA.DIFFICULTY]);
+        
+        if (GAME_A.TAPS_NEEDED[PLAYER_DATA.DIFFICULTY] == playerTaps) {
+            gameState = "win";
+            
+            thisGame.state.start('Outcome');
+        }
     }
+}
+
+function addScore(amount) {
+    PLAYER_DATA.SCORE += amount;
+    scoreTab_txt.text = "Score " + PLAYER_DATA.SCORE;
 }

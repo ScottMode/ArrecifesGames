@@ -45,6 +45,7 @@ BasicGame.Boot.prototype = {
         this.load.script('webfont', '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js');*/
         
         this.game.add.text(0, 0, "hack", {font:"1px ZombieChecklist", fill:"#FFFFFF"});
+        this.game.add.text(0, 0, "hack", {font:"1px Moon Flower Bold", fill:"#FFFFFF"});
     },
 
     create: function () {

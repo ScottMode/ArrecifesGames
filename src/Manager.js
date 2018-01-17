@@ -10,7 +10,8 @@ var PLAYER_DATA = {
 
 var GAME_A = {
     TAPS_NEEDED: [10, 15, 20],
-    MAX_TIME: [60, 50, 45]
+    MAX_TIME: [60, 50, 45],
+    TAP_AWARD: [50, 100, 150]
 };
 
 function ResetData()

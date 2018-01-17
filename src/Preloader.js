@@ -44,6 +44,9 @@ BasicGame.Preloader.prototype = {
         this.load.image('PlayerSunscreen', 'assets/GameA/Links/playerSunscreen.png');
         this.load.image('Maskin1', 'assets/GameA/Links/maskin1.png');
         this.load.image('Textura6', 'assets/GameA/Links/textura6.png');
+        
+        //Outcome
+        this.load.image('Maskin', 'assets/Outcome/Links/maskin.png');
 
 		//this.background = this.add.sprite(0, 0, 'preloaderBackground');
 		//this.preloadBar = this.add.sprite(300, 400, 'preloaderBar');
