@@ -9,8 +9,8 @@ var PLAYER_DATA = {
 };
 
 var GAME_A = {
-    TAPS_NEEDED: [10, 15, 20],
-    MAX_TIME: [60, 50, 45],
+    TAPS_NEEDED: [20, 30, 50],
+    MAX_TIME: [30, 25, 20],
     TAP_AWARD: [50, 100, 150]
 };
 

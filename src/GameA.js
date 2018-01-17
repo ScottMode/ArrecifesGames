@@ -4,6 +4,7 @@
 var gameState = "play";
 var gameTimer = 0;
 var playerTaps = 0;
+var playerSpeed = 0;
 
 //Player
 var divingBoard;
@@ -14,7 +15,7 @@ var playerSunscreen;
 var scoreTab;
 var scoreTab_txt;
 var timerTab;
-var timeTab_txt;
+var timerTab_txt;
 var timerBar;
 
 BasicGame.GameA = function (game) {
@@ -85,12 +86,25 @@ BasicGame.GameA.prototype = {
         scoreTab.anchor.setTo(0.5);
         scoreTab.scale.setTo(0.3, 0.5);
         scoreTab.angle -= 85;
-        scoreTab_txt = this.game.add.text(scoreTab.x - 90, scoreTab.y + 2, "Score " + PLAYER_DATA.SCORE, {font:"40px Moon Flower Bold", fill:"#000000"});
+        scoreTab_txt = this.game.add.text(scoreTab.x - 90, scoreTab.y + 2, "SCORE " + PLAYER_DATA.SCORE, {font:"40px Moon Flower Bold", fill:"#000000"});
         scoreTab_txt.anchor.setTo(0, 0.5);
         scoreTab_txt.align = 'left';
         
         //Time
+        timerTab = this.add.image(100, 50, 'Papel4');
+        timerTab.anchor.setTo(0.5);
+        timerTab.scale.setTo(0.2, 0.30);
+        timerTab.angle -= 85;
+        timerTab_txt = this.game.add.text(timerTab.x, timerTab.y + 2, "TIEMPO" , {font:"40px Moon Flower Bold", fill:"#000000"});
+        timerTab_txt.anchor.setTo(0.5);
+        timerTab_txt.align = 'center';
         
+        timerBar = this.add.image(200, 50, 'Textura6');
+        timerBar.anchor.setTo(0, 0.5);
+        timerBar.scale.setTo(0.4, 0.04)
+        timerBar.tint = 0xff0000;
+        
+        gameTimer = GAME_A.MAX_TIME[PLAYER_DATA.DIFFICULTY];
         
         //Fires
         /*fires = this.add.group();
@@ -134,6 +148,27 @@ BasicGame.GameA.prototype = {
 
 	update: function () {
         
+        if (gameState == "play"){
+            
+            gameTimer -= this.time.elapsed/1000;
+            timerBar.scale.setTo(0.4 * (gameTimer / GAME_A.MAX_TIME[PLAYER_DATA.DIFFICULTY]), 0.04);
+            
+            if (gameTimer <= 0){
+                gameState = "lose";
+                gameTimer = 0;
+                timerBar.scale.setTo(0, 0.04);
+            }
+        }
+        else if (gameState == "lose"){
+            playerSpeed += 1;
+            player.y += playerSpeed;
+            playerSunscreen.y = player.y;
+            
+            if (player.y > 700){
+                gameState = "";
+                this.state.start('Outcome');
+            }
+        }
         
         
 	}
