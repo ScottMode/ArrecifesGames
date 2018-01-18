@@ -48,7 +48,10 @@ BasicGame.GameA.prototype = {
 	create: function () {
         
         //Init
+        gameState = "play";
+        gameTimer = GAME_A.MAX_TIME[PLAYER_DATA.DIFFICULTY];
         playerTaps = 0;
+        playerSpeed = 0;
         
         //Setting
         var levelBackground = this.add.image(this.world.centerX, this.world.centerY, 'GameABackground');
@@ -86,7 +89,7 @@ BasicGame.GameA.prototype = {
         scoreTab.anchor.setTo(0.5);
         scoreTab.scale.setTo(0.3, 0.5);
         scoreTab.angle -= 85;
-        scoreTab_txt = this.game.add.text(scoreTab.x - 90, scoreTab.y + 2, "SCORE " + PLAYER_DATA.SCORE, {font:"40px Moon Flower Bold", fill:"#000000"});
+        scoreTab_txt = this.game.add.text(scoreTab.x - 90, scoreTab.y + 2, "SCORE " + PLAYER_DATA.ROUND_SCORE, {font:"40px Moon Flower Bold", fill:"#000000"});
         scoreTab_txt.anchor.setTo(0, 0.5);
         scoreTab_txt.align = 'left';
         
@@ -103,8 +106,6 @@ BasicGame.GameA.prototype = {
         timerBar.anchor.setTo(0, 0.5);
         timerBar.scale.setTo(0.4, 0.04)
         timerBar.tint = 0xff0000;
-        
-        gameTimer = GAME_A.MAX_TIME[PLAYER_DATA.DIFFICULTY];
         
         //Fires
         /*fires = this.add.group();
@@ -166,7 +167,7 @@ BasicGame.GameA.prototype = {
             
             if (player.y > 700){
                 gameState = "";
-                this.state.start('Outcome');
+                this.state.start('Outcome', true);
             }
         }
         
@@ -194,5 +195,5 @@ function tappedPlayer() {
 function addScore(amount) {
     PLAYER_DATA.SCORE += amount;
     PLAYER_DATA.ROUND_SCORE += amount;
-    scoreTab_txt.text = "Score " + PLAYER_DATA.SCORE;
+    scoreTab_txt.text = "Score " + PLAYER_DATA.ROUND_SCORE;
 }

@@ -23,7 +23,7 @@ function goToNextGame() {
     switch (Math.floor(Math.random() * 0)) {
             case 0:
             PLAYER_DATA.CURRENT_GAME = "GameA";
-            thisGame.state.start("GameA");
+            thisGame.state.start("GameA", true);
             break;
     }
 }
