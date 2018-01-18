@@ -47,6 +47,7 @@ BasicGame.Preloader.prototype = {
         
         //Outcome
         this.load.image('Maskin', 'assets/Outcome/Links/maskin.png');
+        this.load.image('Maskin2', 'assets/Outcome/Links/maskin2.png');
 
 		//this.background = this.add.sprite(0, 0, 'preloaderBackground');
 		//this.preloadBar = this.add.sprite(300, 400, 'preloaderBar');

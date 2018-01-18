@@ -122,5 +122,5 @@ function setHard()
 
 function startGame()
 {
-    thisGame.state.start('GameA');
+    goToNextGame();
 }

@@ -193,5 +193,6 @@ function tappedPlayer() {
 
 function addScore(amount) {
     PLAYER_DATA.SCORE += amount;
+    PLAYER_DATA.ROUND_SCORE += amount;
     scoreTab_txt.text = "Score " + PLAYER_DATA.SCORE;
 }

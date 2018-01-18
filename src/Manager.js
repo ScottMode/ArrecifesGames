@@ -5,6 +5,8 @@ var stateTarget = '';
 
 var PLAYER_DATA = {
     SCORE: 0,
+    ROUND_SCORE: 0,
+    CURRENT_GAME: "GameA",
     DIFFICULTY: 0 //0-2
 };
 
@@ -13,6 +15,18 @@ var GAME_A = {
     MAX_TIME: [30, 25, 20],
     TAP_AWARD: [50, 100, 150]
 };
+
+function goToNextGame() {
+    
+    PLAYER_DATA.ROUND_SCORE = 0;
+    
+    switch (Math.floor(Math.random() * 0)) {
+            case 0:
+            PLAYER_DATA.CURRENT_GAME = "GameA";
+            thisGame.state.start("GameA");
+            break;
+    }
+}
 
 function ResetData()
 {
