@@ -12,11 +12,14 @@ var player;
 var playerSunscreen;
 
 //UI
+var cropRect;
 var scoreTab;
 var scoreTab_txt;
 var timerTab;
 var timerTab_txt;
 var timerBar;
+var barWidth;
+
 
 BasicGame.GameA = function (game) {
 
@@ -57,6 +60,11 @@ BasicGame.GameA.prototype = {
         var levelBackground = this.add.image(this.world.centerX, this.world.centerY, 'GameABackground');
         levelBackground.anchor.setTo(0.5);
         
+        var sunFace = this.add.image(this.world.centerX + 300, this.world.centerY - 250, 'SunFace');
+        sunFace.anchor.setTo(0.5);
+        sunFace.scale.setTo(0.5);
+        
+        
         //Pool and diving board
         var pool = this.add.image(this.world.centerX, this.world.centerY + 300, 'Pool');
         pool.anchor.setTo(0.5);
@@ -67,8 +75,6 @@ BasicGame.GameA.prototype = {
         divingBoard = this.add.image(this.world.centerX, this.world.centerY, 'Textura6');
         divingBoard.anchor.setTo(0.5, 0);
         divingBoard.scale.setTo(0.1, 0.05);
-        
-        //Time bar
         
         
         //Player
@@ -102,10 +108,14 @@ BasicGame.GameA.prototype = {
         timerTab_txt.anchor.setTo(0.5);
         timerTab_txt.align = 'center';
         
-        timerBar = this.add.image(200, 50, 'Textura6');
+        
+        timerBar = this.add.image(200, 50, 'TimeBar');
         timerBar.anchor.setTo(0, 0.5);
-        timerBar.scale.setTo(0.4, 0.04)
-        timerBar.tint = 0xff0000;
+        timerBar.cropEnabled = true;
+        
+        barWidth = timerBar.width;
+        cropRect = new Phaser.Rectangle(0, 0, timerBar.width, timerBar.height);
+        timerBar.scale.setTo(0.4, 0.5)
         
         //Fires
         /*fires = this.add.group();
@@ -152,12 +162,20 @@ BasicGame.GameA.prototype = {
         if (gameState == "play"){
             
             gameTimer -= this.time.elapsed/1000;
-            timerBar.scale.setTo(0.4 * (gameTimer / GAME_A.MAX_TIME[PLAYER_DATA.DIFFICULTY]), 0.04);
+            
+            //timerBar.scale.setTo(0.4 * (gameTimer / GAME_A.MAX_TIME[PLAYER_DATA.DIFFICULTY]), 0.5);
+            //var cropRect = new Phaser.Rectangle(0, 0, cropRect.width - (timerBar.width * (gameTimer / GAME_A.MAX_TIME[PLAYER_DATA.DIFFICULTY])), timerBar.height);
+            //timerBar.crop(0.4 * (gameTimer / GAME_A.MAX_TIME[PLAYER_DATA.DIFFICULTY]), 0.5);
+            //console.log("crop rect width: " + cropRect.width);
+            //console.log((gameTimer / GAME_A.MAX_TIME[PLAYER_DATA.DIFFICULTY]));
+            cropRect.width = barWidth * ((gameTimer / GAME_A.MAX_TIME[PLAYER_DATA.DIFFICULTY]));
+            timerBar.crop(cropRect);
+            timerBar.updateCrop();
             
             if (gameTimer <= 0){
                 gameState = "lose";
                 gameTimer = 0;
-                timerBar.scale.setTo(0, 0.04);
+                timerBar.scale.setTo(0, 0);
             }
         }
         else if (gameState == "lose"){

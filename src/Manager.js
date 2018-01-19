@@ -11,9 +11,9 @@ var PLAYER_DATA = {
 };
 
 var GAME_A = {
-    TAPS_NEEDED: [20, 30, 50],
-    MAX_TIME: [30, 25, 20],
-    TAP_AWARD: [50, 100, 150]
+    TAPS_NEEDED: [20, 20, 20],
+    MAX_TIME: [20, 15, 10],
+    TAP_AWARD: [100, 100, 100]
 };
 
 function goToNextGame() {
