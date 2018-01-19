@@ -4,19 +4,13 @@ var menuBackground = null;
 
 //TEXT
 var easyButton = null;
-var easyButton_txt = null;
 var mediumButton = null;
-var mediumButton_txt = null;
 var hardButton = null;
-var hardButton_txt = null;
 
 var clickButton = null;
 var clickButton_txt = null;
 var hand = null;
 
-var fish = null;
-var crab = null;
-var squid = null;
 var backgroundSquid;
 var backgroundCrab;
 
@@ -40,49 +34,25 @@ BasicGame.MainMenu.prototype = {
         backgroundCrab.anchor.setTo(0.5);
         
         //Difficulty buttons + text
-        var easyButton = thisGame.add.button(thisGame.world.centerX - 450, 580, 'Papel2', setEasy, this);
+        easyButton = thisGame.add.button(thisGame.world.centerX - 450, 580, 'Easy', setEasy, this);
         easyButton.anchor.setTo(0.5);
-        easyButton.scale.setTo(0.2);
+        //easyButton.scale.setTo(0.2);
         easyButton.input.useHandCursor = true;
-        //e text
-        easyButton_txt = this.game.add.text(easyButton.x, easyButton.y + 30, "fácil", {font:"55px ZombieChecklist", fill:"#000000"});
-        easyButton_txt.anchor.setTo(0.5);
-        easyButton_txt.align = 'center';
         
         
         //Difficulty buttons + text
-        var mediumButton = thisGame.add.button(thisGame.world.centerX, 750, 'Papel2', setMedium, this);
+        mediumButton = thisGame.add.button(thisGame.world.centerX, 750, 'MediumUnderline', setMedium, this);
         mediumButton.anchor.setTo(0.5);
-        mediumButton.scale.setTo(0.2);
+        //mediumButton.scale.setTo(0.2);
         mediumButton.input.useHandCursor = true;
-        mediumButton.angle += 5;
-        //text
-        mediumButton_txt = this.game.add.text(mediumButton.x, mediumButton.y + 30, "medio", {font:"55px ZombieChecklist", fill:"#000000"});
-        mediumButton_txt.anchor.setTo(0.5);
-        mediumButton_txt.align = 'center';
+        //mediumButton.angle += 5;
+        
         
         //Difficulty buttons + text
-        var hardButton = thisGame.add.button(thisGame.world.centerX + 450, 580, 'Papel2', setHard, this);
+        hardButton = thisGame.add.button(thisGame.world.centerX + 450, 580, 'Hard', setHard, this);
         hardButton.anchor.setTo(0.5);
-        hardButton.scale.setTo(-0.2, 0.2);
+        //hardButton.scale.setTo(-0.2, 0.2);
         hardButton.input.useHandCursor = true;
-        //text
-        hardButton_txt = this.game.add.text(hardButton.x, hardButton.y + 30, "difícil", {font:"55px ZombieChecklist", fill:"#000000"});
-        hardButton_txt.anchor.setTo(0.5);
-        hardButton_txt.align = 'center';
-        
-        //Fish buttons stuff
-        fish = this.add.image(easyButton.x, easyButton.y - 30, 'Pezrojo');
-        fish.anchor.setTo(0.5);
-        fish.scale.setTo(0.13);
-        fish.angle -= 20;
-        crab = this.add.image(mediumButton.x, mediumButton.y - 30, 'Cangre2');
-        crab.anchor.setTo(0.5);
-        crab.scale.setTo(0.13);
-        squid = this.add.image(hardButton.x, hardButton.y - 30, 'Calamar2');
-        squid.anchor.setTo(0.5);
-        squid.scale.setTo(0.08);
-        squid.angle += 80;
         
         //Hand
         var clickButton = thisGame.add.button(thisGame.world.centerX, this.world.centerY + 380, 'Papel4', startGame, this);
@@ -107,17 +77,25 @@ BasicGame.MainMenu.prototype = {
 function setEasy()
 {
     PLAYER_DATA.DIFFICULTY = 0;
-    
+    easyButton.loadTexture('EasyUnderline');
+    mediumButton.loadTexture('Medium');
+    hardButton.loadTexture('Hard');
 }
 
 function setMedium()
 {
     PLAYER_DATA.DIFFICULTY = 1;
+    mediumButton.loadTexture('MediumUnderline');
+    hardButton.loadTexture('Hard');
+    easyButton.loadTexture('Easy');
 }
 
 function setHard()
 {
     PLAYER_DATA.DIFFICULTY = 2;
+    hardButton.loadTexture('HardUnderline');
+    mediumButton.loadTexture('Medium');
+    eadyButton.loadTexture('Easy');
 }
 
 function startGame()

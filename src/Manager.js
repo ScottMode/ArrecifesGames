@@ -7,7 +7,7 @@ var PLAYER_DATA = {
     SCORE: 0,
     ROUND_SCORE: 0,
     CURRENT_GAME: "GameA",
-    DIFFICULTY: 0 //0-2
+    DIFFICULTY: 1 //0-2
 };
 
 var GAME_A = {

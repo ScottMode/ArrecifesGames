@@ -12,6 +12,9 @@ var player;
 var playerSunscreen;
 
 //UI
+var instructionsModal;
+var instructionsPlayButton;
+var instructionsPlayButton_txt;
 var cropRect;
 var scoreTab;
 var scoreTab_txt;
@@ -51,7 +54,7 @@ BasicGame.GameA.prototype = {
 	create: function () {
         
         //Init
-        gameState = "play";
+        gameState = "intro";
         gameTimer = GAME_A.MAX_TIME[PLAYER_DATA.DIFFICULTY];
         playerTaps = 0;
         playerSpeed = 0;
@@ -117,6 +120,21 @@ BasicGame.GameA.prototype = {
         cropRect = new Phaser.Rectangle(0, 0, timerBar.width, timerBar.height);
         timerBar.scale.setTo(0.4, 0.5)
         
+        //instructions
+        instructionsModal = this.add.image(this.world.centerX, this.world.centerY, PLAYER_DATA.CURRENT_GAME + "Instructions");
+        instructionsModal.anchor.setTo(0.5);
+        instructionsModal.scale.setTo(0.7);
+        
+        //Hand
+        instructionsPlayButton = thisGame.add.button(thisGame.world.centerX - 8, this.world.centerY + 380, 'Papel4', this.playGame, this);
+        instructionsPlayButton.anchor.setTo(0.5);
+        instructionsPlayButton.scale.setTo(0.4);
+        instructionsPlayButton.input.useHandCursor = true;
+        instructionsPlayButton.angle -= 80;
+        instructionsPlayButton_txt = this.game.add.text(instructionsPlayButton.x, instructionsPlayButton.y, "INICIAR", {font:"55px ZombieChecklist", fill:"#000000"});
+        instructionsPlayButton_txt.anchor.setTo(0.5);
+        instructionsPlayButton_txt.align = 'center';
+        
         //Fires
         /*fires = this.add.group();
         fires.enableBody = true;
@@ -156,6 +174,13 @@ BasicGame.GameA.prototype = {
         level_txt.fontSize = 30;
         level_txt.align = 'left';*/
 	},
+    
+    playGame: function() {
+        gameState = "play";
+        instructionsModal.visible = false;
+        instructionsPlayButton.visible = false;
+        instructionsPlayButton_txt.visible = false;
+    },
 
 	update: function () {
         

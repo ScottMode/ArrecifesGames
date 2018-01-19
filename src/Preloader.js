@@ -36,6 +36,12 @@ BasicGame.Preloader.prototype = {
         this.load.image('Cangre2', 'assets/MainMenu/Links/cangre2.png');
         this.load.image('Cangre3', 'assets/MainMenu/Links/cangre3.png');
         this.load.image('Pezrojo', 'assets/MainMenu/Links/pezrojo.png');
+        this.load.image('HardUnderline', 'assets/MainMenu/Links/hover-hard.png');
+        this.load.image('MediumUnderline', 'assets/MainMenu/Links/hover-medium.png');
+        this.load.image('EasyUnderline', 'assets/MainMenu/Links/hover-easy.png');
+        this.load.image('Hard', 'assets/MainMenu/Links/button-hard.png');
+        this.load.image('Medium', 'assets/MainMenu/Links/button-medium.png');
+        this.load.image('Easy', 'assets/MainMenu/Links/button-easy.png');
         
         //Game A
         this.load.image('GameABackground', 'assets/GameA/Links/background.png');
@@ -46,6 +52,8 @@ BasicGame.Preloader.prototype = {
         this.load.image('Textura6', 'assets/GameA/Links/textura6.png');
         this.load.image('TimeBar', 'assets/GameA/Links/timeBar.png');
         this.load.image('SunFace', 'assets/GameA/Links/sunFace.png');
+        this.load.image('GameAInstructions', 'assets/GameA/Links/instructions.png');
+        
         
         //Outcome
         this.load.image('Maskin', 'assets/Outcome/Links/maskin.png');
