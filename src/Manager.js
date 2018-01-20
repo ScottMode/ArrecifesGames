@@ -6,8 +6,10 @@ var stateTarget = '';
 var PLAYER_DATA = {
     SCORE: 0,
     ROUND_SCORE: 0,
-    CURRENT_GAME: "GameA",
-    DIFFICULTY: 1 //0-2
+    CURRENT_GAME: "GameB",
+    DIFFICULTY: 1, //0-2
+    GAME_LIST: ["GameA", "GameA", "GameC", "GameC", "GameC"],
+    GAME_INDEX: -1
 };
 
 var GAME_A = {
@@ -16,16 +18,47 @@ var GAME_A = {
     TAP_AWARD: [100, 100, 100]
 };
 
+function createRandomGameList() {
+    
+    PLAYER_DATA.GAME_LIST = shuffle(PLAYER_DATA.GAME_LIST);
+    
+    goToNextGame();
+}
+
 function goToNextGame() {
     
-    PLAYER_DATA.ROUND_SCORE = 0;
+    PLAYER_DATA.GAME_INDEX++;
     
-    switch (Math.floor(Math.random() * 0)) {
-            case 0:
-            PLAYER_DATA.CURRENT_GAME = "GameA";
-            thisGame.state.start("GameA", true);
-            break;
+    if (PLAYER_DATA.GAME_INDEX < 5) {
+        //else do something else
+        PLAYER_DATA.CURRENT_GAME = PLAYER_DATA.GAME_LIST[PLAYER_DATA.GAME_INDEX];
+    
+        PLAYER_DATA.ROUND_SCORE = 0;
+        
+        console.log(PLAYER_DATA.CURRENT_GAME);
+    
+        thisGame.state.start(PLAYER_DATA.CURRENT_GAME, true);
     }
+}
+
+function shuffle(array) 
+{
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
 }
 
 function ResetData()

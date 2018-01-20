@@ -1,0 +1,452 @@
+Package Report
+
+-----------------------------------------------------------------------------
+Document:
+Name: basura.ai
+Color Mode: RGB color
+Color Profile: sRGB IEC61966-2.1
+Ruler Units: pixels
+Artboard Dimensions: 1920 px x 1080 px
+Show Images in Outline Mode: OFF
+Highlight Substituted Fonts: OFF
+Highlight Substituted Glyphs: OFF
+Preserve Text Editability
+Simulate Colored Paper: OFF
+
+-----------------------------------------------------------------------------
+Spot Color Objects:
+
+-----------------------------------------------------------------------------
+Missing Fonts:NONE
+
+-----------------------------------------------------------------------------
+Protected Fonts that were not packaged:NONE
+
+-----------------------------------------------------------------------------
+Fonts:
+Moon Flower Bold (TrueType)
+ZombieChecklist (TrueType)
+
+-----------------------------------------------------------------------------
+Embedded Fonts:
+NONE
+
+-----------------------------------------------------------------------------
+Missing Links:
+NONE
+
+-----------------------------------------------------------------------------
+Linked Images:
+
+/Users/NellyCuellar/Desktop/reales/basura4.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 97K, 156 by 160 pixels
+Dimensions: 62.4 by 64 points 
+Resolution: 180 by 180 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/papel4.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1033K, 443 by 597 pixels
+Dimensions: 260.671 by 188.052 points 
+Resolution: 122.361 by 228.575 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/maskin3.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 402K, 428 by 241 pixels
+Dimensions: 72.813 by 41 points 
+Resolution: 423.22 by 423.22 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/maskin.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 8100K, 1920 by 1080 pixels
+Dimensions: 1107.559 by 533.735 points 
+Resolution: 124.815 by 145.69 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/monticulo2.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1327K, 608 by 559 pixels
+Dimensions: 226.528 by 208.271 points 
+Resolution: 193.248 by 193.248 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/yate2.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2198K, 1291 by 436 pixels
+Dimensions: 547.787 by 185 points 
+Resolution: 169.686 by 169.686 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/monticulo1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1572K, 720 by 559 pixels
+Dimensions: 268.256 by 208.271 points 
+Resolution: 193.248 by 193.248 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/monticulo3.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1327K, 608 by 559 pixels
+Dimensions: 226.528 by 208.271 points 
+Resolution: 193.248 by 193.248 pixels per inch
+
+
+(Unknown image)
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 97K, 156 by 160 pixels
+Dimensions: 63.2 by 64.821 points 
+Resolution: 177.722 by 177.722 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/papel4.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1033K, 443 by 597 pixels
+Dimensions: 176.162 by 105.781 points 
+Resolution: 181.061 by 406.347 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/basura7.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 97K, 156 by 160 pixels
+Dimensions: 72.72 by 73.32 points 
+Resolution: 154.455 by 157.119 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/monticulo3.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1327K, 608 by 559 pixels
+Dimensions: 226.528 by 208.271 points 
+Resolution: 193.248 by 193.248 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/basura7.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 97K, 156 by 160 pixels
+Dimensions: 94.313 by 94.566 points 
+Resolution: 119.092 by 121.82 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/monticulo3.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1327K, 608 by 559 pixels
+Dimensions: 226.528 by 208.271 points 
+Resolution: 193.248 by 193.248 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/monticulo2.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1327K, 608 by 559 pixels
+Dimensions: 226.528 by 208.271 points 
+Resolution: 193.248 by 193.248 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/monticulo1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1572K, 720 by 559 pixels
+Dimensions: 268.256 by 208.271 points 
+Resolution: 193.248 by 193.248 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/basura6.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 97K, 156 by 160 pixels
+Dimensions: 52.32 by 51.93 points 
+Resolution: 214.679 by 221.835 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/monticulo3.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1327K, 608 by 559 pixels
+Dimensions: 226.528 by 208.271 points 
+Resolution: 193.248 by 193.248 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/monticulo2.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1327K, 608 by 559 pixels
+Dimensions: 226.528 by 208.271 points 
+Resolution: 193.248 by 193.248 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/monticulo1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1572K, 720 by 559 pixels
+Dimensions: 268.256 by 208.271 points 
+Resolution: 193.248 by 193.248 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/playasucia.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 6075K, 1920 by 1080 pixels
+Dimensions: 1920 by 1080 points 
+Resolution: 72 by 72 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/basura6.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 97K, 156 by 160 pixels
+Dimensions: 78.96 by 79.24 points 
+Resolution: 142.249 by 145.381 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/monticulo1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1572K, 720 by 559 pixels
+Dimensions: 268.256 by 208.271 points 
+Resolution: 193.248 by 193.248 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/family.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 5349K, 913 by 1500 pixels
+Dimensions: 255.504 by 418.169 points 
+Resolution: 257.28 by 258.269 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/basura1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 97K, 156 by 160 pixels
+Dimensions: 66.04 by 74.4 points 
+Resolution: 170.079 by 154.839 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/basura1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 97K, 156 by 160 pixels
+Dimensions: 65.68 by 74.44 points 
+Resolution: 171.011 by 154.755 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/basura6.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 97K, 156 by 160 pixels
+Dimensions: 60.76 by 60.32 points 
+Resolution: 184.858 by 190.981 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/basura6.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 97K, 156 by 160 pixels
+Dimensions: 47.052 by 47.012 points 
+Resolution: 238.714 by 245.043 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/basura2.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 97K, 156 by 160 pixels
+Dimensions: 81.9 by 95.64 points 
+Resolution: 137.143 by 120.452 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/monticulo3.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1327K, 608 by 559 pixels
+Dimensions: 226.528 by 208.271 points 
+Resolution: 193.248 by 193.248 pixels per inch
+
+
+(Unknown image)
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 97K, 156 by 160 pixels
+Dimensions: 39.975 by 41 points 
+Resolution: 280.976 by 280.976 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/basura6.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 97K, 156 by 160 pixels
+Dimensions: 47.212 by 47.292 points 
+Resolution: 237.905 by 243.592 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/papel4.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1033K, 443 by 597 pixels
+Dimensions: 312.109 by 152.9 points 
+Resolution: 102.195 by 281.126 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/basura5.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 97K, 156 by 160 pixels
+Dimensions: 58.32 by 69.6 points 
+Resolution: 192.593 by 165.517 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/basura6.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 97K, 156 by 160 pixels
+Dimensions: 60.96 by 60.36 points 
+Resolution: 184.252 by 190.855 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/basura5.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 97K, 156 by 160 pixels
+Dimensions: 46.337 by 47.297 points 
+Resolution: 242.401 by 243.57 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/basura2.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 97K, 156 by 160 pixels
+Dimensions: 73.065 by 74.495 points 
+Resolution: 153.725 by 154.642 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/basura6.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 97K, 156 by 160 pixels
+Dimensions: 67.275 by 69 points 
+Resolution: 166.957 by 166.957 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/maskin9.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 268K, 307 by 224 pixels
+Dimensions: 17.838 by 24.094 points 
+Resolution: 1239.158 by 669.376 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/basura5.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 97K, 156 by 160 pixels
+Dimensions: 70.64 by 84.96 points 
+Resolution: 159.003 by 135.593 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/monticulo1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1572K, 720 by 559 pixels
+Dimensions: 268.256 by 208.271 points 
+Resolution: 193.248 by 193.248 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/monticulo2.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1327K, 608 by 559 pixels
+Dimensions: 226.528 by 208.271 points 
+Resolution: 193.248 by 193.248 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/monticulo2.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1327K, 608 by 559 pixels
+Dimensions: 226.528 by 208.271 points 
+Resolution: 193.248 by 193.248 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/basura7.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 97K, 156 by 160 pixels
+Dimensions: 72.44 by 73.24 points 
+Resolution: 155.052 by 157.291 pixels per inch
+
+
+(Unknown image)
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 97K, 156 by 160 pixels
+Dimensions: 46.8 by 48 points 
+Resolution: 240 by 240 pixels per inch
+
+
+/Users/NellyCuellar/Desktop/reales/basura7.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 97K, 156 by 160 pixels
+Dimensions: 58.774 by 58.774 points 
+Resolution: 191.104 by 196.004 pixels per inch

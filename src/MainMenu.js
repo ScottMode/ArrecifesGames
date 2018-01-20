@@ -95,10 +95,10 @@ function setHard()
     PLAYER_DATA.DIFFICULTY = 2;
     hardButton.loadTexture('HardUnderline');
     mediumButton.loadTexture('Medium');
-    eadyButton.loadTexture('Easy');
+    easyButton.loadTexture('Easy');
 }
 
 function startGame()
 {
-    goToNextGame();
+    createRandomGameList();
 }
