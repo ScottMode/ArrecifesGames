@@ -56,8 +56,16 @@ BasicGame.Preloader.prototype = {
         
         //Game B
         this.load.image('GameBBackground', 'assets/GameB/Links/background.jpg');
+        this.load.image('RightChoiceButton', 'assets/GameB/Links/rightChoice.png');
+        this.load.image('LeftChoiceButton', 'assets/GameB/Links/leftChoice.png');
         this.load.image('GameBInstructions', 'assets/GameB/Links/instructions.png');
         this.load.image('GameCInstructions', 'assets/GameC/Links/instructions.png');
+        for (var i = 0; i < badChoiceList.length; i++) {
+            this.load.image(badChoiceList[i], 'assets/GameB/Links/' + badChoiceList[i] + '.png');
+        }
+        for (var i = 0; i < goodChoiceList.length; i++) {
+            this.load.image(goodChoiceList[i], 'assets/GameB/Links/' + goodChoiceList[i] + '.png');
+        }
         
         //Game C
         this.load.image('ship', 'assets/GameC/Links/velero.png');

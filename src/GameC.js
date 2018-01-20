@@ -2,11 +2,13 @@
 
 //Gameplay logic
 var gameState = "play";
+var hotelsConverted = 0;
 
 //C
 var moon = null;
 var ship = null;
 var hotels = null;
+
 
 //UI
 var instructionsModal;
@@ -52,6 +54,7 @@ BasicGame.GameC.prototype = {
         
         //Init
         gameState = "intro";
+        hotelsConverted = 0;
         gameTimer = GAME_A.MAX_TIME[PLAYER_DATA.DIFFICULTY];
         
         //Setting
@@ -139,6 +142,10 @@ BasicGame.GameC.prototype = {
         
         if (gameState == "play"){
             
+            if (hotelsConverted == 4) {
+                this.state.start('Outcome', true);
+            }
+            
             gameTimer -= this.time.elapsed/1000;
             cropRect.width = barWidth * ((gameTimer / GAME_A.MAX_TIME[PLAYER_DATA.DIFFICULTY]));
             timerBar.crop(cropRect);
@@ -184,6 +191,7 @@ BasicGame.GameC.prototype = {
             var randNum = Math.floor(Math.random() * 2);
             object.loadTexture('eco' + randNum);
             object.alpha = 1;
+            hotelsConverted++;
         }
     }
 

@@ -4,6 +4,14 @@
 var gameState = "play";
 var gameTimer = 0;
 
+//B
+var rightChoiceButton;
+var rightChoiceImage;
+var rightChoiceButton_txt;
+var leftChoiceButton;
+var leftChoiceImage;
+var leftChoiceButton_txt;
+
 //UI
 var instructionsModal;
 var instructionsPlayButton;
@@ -56,6 +64,48 @@ BasicGame.GameB.prototype = {
         levelBackground.scale.setTo(0.7);
         
         
+        var vsButton = thisGame.add.image(this.world.centerX, this.world.centerY, 'Papel4');
+        vsButton.anchor.setTo(0.5);
+        vsButton.scale.setTo(0.3, 0.5);
+        vsButton.angle -= 90;
+        var vsButton_txt = this.game.add.text(vsButton.x, vsButton.y, "VS", {font:"55px ZombieChecklist", fill:"#000000"});
+        vsButton_txt.anchor.setTo(0.5);
+        vsButton_txt.align = 'center';
+        
+        //Finger
+        var finger = this.add.image(this.world.centerX, this.world.centerY + 200, 'Mano');
+        finger.anchor.setTo(0.5, 0.5);
+        finger.scale.setTo(-0.3, 0.3);
+        finger.angle -= 40;
+        
+        //Choice buttons
+        rightChoiceButton = this.add.button(this.world.centerX + 350, this.world.centerY - 50, 'RightChoiceButton', this.pickRight, this);
+        rightChoiceButton.anchor.setTo(0.5);
+        rightChoiceButton.correct = false;
+        rightChoiceButton.choice = "";
+        rightChoiceButton_txt = this.game.add.text(rightChoiceButton.x, rightChoiceButton.y + 75, "", {font:"40px ZombieChecklist", fill:"#000000"});
+        rightChoiceButton_txt.anchor.setTo(0.5);
+        rightChoiceButton_txt.align = 'center';
+        rightChoiceButton_txt.angle += 5;
+        rightChoiceImage = this.add.image(rightChoiceButton.x, rightChoiceButton.y, 'fruta');
+        rightChoiceImage.anchor.setTo(0.5);
+        rightChoiceImage.scale.setTo(0.2);
+        
+        leftChoiceButton = this.add.button(this.world.centerX - 350, this.world.centerY - 50, 'LeftChoiceButton', this.pickLeft, this);
+        leftChoiceButton.anchor.setTo(0.5);
+        leftChoiceButton.correct = false;
+        leftChoiceButton.choice = "";
+        leftChoiceButton_txt = this.game.add.text(leftChoiceButton.x, leftChoiceButton.y + 75, "", {font:"40px ZombieChecklist", fill:"#000000"});
+        leftChoiceButton_txt.anchor.setTo(0.5);
+        leftChoiceButton_txt.align = 'center';
+        leftChoiceButton_txt.angle -= 5;
+        leftChoiceImage = this.add.image(leftChoiceButton.x, leftChoiceButton.y, 'fruta');
+        leftChoiceImage.anchor.setTo(0.5);
+        leftChoiceImage.scale.setTo(0.2);
+        
+        this.setButtonChoices();
+        
+        
         //UI
         //Score
         scoreTab = this.add.image(this.world.width - 140, 50, 'Papel4');
@@ -98,7 +148,6 @@ BasicGame.GameB.prototype = {
         instructionsPlayButton_txt = this.game.add.text(instructionsPlayButton.x, instructionsPlayButton.y, "INICIAR", {font:"55px ZombieChecklist", fill:"#000000"});
         instructionsPlayButton_txt.anchor.setTo(0.5);
         instructionsPlayButton_txt.align = 'center';
-        
 	},
     
     playGame: function() {
@@ -136,6 +185,47 @@ BasicGame.GameB.prototype = {
         PLAYER_DATA.SCORE += amount;
         PLAYER_DATA.ROUND_SCORE += amount;
         scoreTab_txt.text = "Score " + PLAYER_DATA.ROUND_SCORE;
+    },
+    
+    pickRight: function (button) {
+        if (rightChoiceButton.correct) {
+            this.addScore(200);
+        } else {
+            this.addScore(-200);
+        }
+        
+        this.setButtonChoices();
+    },
+    
+    pickLeft: function (button) {
+        if (leftChoiceButton.correct) {
+            this.addScore(200);
+        } else {
+            this.addScore(-200);
+        }
+        
+        this.setButtonChoices();
+    },
+    
+    setButtonChoices: function () {
+        
+        var isRight = !!+(Math.floor(Math.random() * 2));
+        
+        rightChoiceButton.correct = isRight;
+        leftChoiceButton.correct = !isRight;
+        
+        if (isRight) {
+            rightChoiceButton.choice = goodChoiceList[(Math.floor(Math.random() * goodChoiceList.length))];
+            leftChoiceButton.choice = badChoiceList[(Math.floor(Math.random() * badChoiceList.length))];
+        } else {
+            leftChoiceButton.choice = goodChoiceList[(Math.floor(Math.random() * goodChoiceList.length))];
+            rightChoiceButton.choice = badChoiceList[(Math.floor(Math.random() * badChoiceList.length))];
+        }
+        
+        rightChoiceImage.loadTexture(rightChoiceButton.choice);
+        leftChoiceImage.loadTexture(leftChoiceButton.choice);
+        rightChoiceButton_txt.text = rightChoiceButton.choice;
+        leftChoiceButton_txt.text = leftChoiceButton.choice;
     }
 
 };
