@@ -5,13 +5,16 @@ var stateTarget = '';
 var goodChoiceList = ["fruta", "chanclas", "taza", "playera", "sombrero", "pareo", "pulsera"];
 var badChoiceList = ["marconchita", "destapador", 'frasco', 'collar', "barcobotella", "huevos", "concha"];
 
+var goodWasteList = ["trash1", "trash2", "trash3", "trash4", "trash5"];
+var badWasteList = ["reef1", "reef2", "reef3"];
+
 
 var PLAYER_DATA = {
     SCORE: 0,
     ROUND_SCORE: 0,
     CURRENT_GAME: "GameB",
     DIFFICULTY: 1, //0-2
-    GAME_LIST: ["GameD", "GameA", "GameB", "GameC", "GameD"],
+    GAME_LIST: ["GameA", "GameB", "GameC", "GameD", "GameE"],
     GAME_INDEX: -1
 };
 

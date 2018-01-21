@@ -90,6 +90,13 @@ BasicGame.Preloader.prototype = {
         
         //Game E
         this.load.image('GameEInstructions', 'assets/GameE/Links/instructions.png');
+        this.load.image('GameEBackground', 'assets/GameE/Links/background.jpg')
+        for (var i = 0; i < badWasteList.length; i++) {
+            this.load.image(badWasteList[i], 'assets/GameE/Links/' + badWasteList[i] + '.png');
+        }
+        for (var i = 0; i < goodWasteList.length; i++) {
+            this.load.image(goodWasteList[i], 'assets/GameE/Links/' + goodWasteList[i] + '.png');
+        }
         
         
         //Outcome

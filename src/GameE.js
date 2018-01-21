@@ -50,8 +50,30 @@ BasicGame.GameE.prototype = {
         gameTimer = GAME_A.MAX_TIME[PLAYER_DATA.DIFFICULTY];
         
         //Setting
-        var levelBackground = this.add.image(this.world.centerX, this.world.centerY, 'GameBBackground');
+        var levelBackground = this.add.image(this.world.centerX, this.world.centerY, 'GameEBackground');
         levelBackground.anchor.setTo(0.5);
+        
+        //Boat
+        
+        
+        //Trash
+        for (var i = 0; i < 20; i++) {
+            var trash = this.add.image(50 + (Math.floor(Math.random() * this.world.width)), this.world.centerY + 300 + (Math.floor(Math.random() * 100)), goodWasteList[(Math.floor(Math.random() * goodWasteList.length))]);
+            trash.anchor.setTo(0.5);
+            trash.scale.setTo(0.4);
+            trash.inputEnabled = true;
+            trash.events.onInputDown.add(this.choseGood, this);
+        }
+        
+        //Reef
+        for (var i = 0; i < 10; i++) {
+            var trash = this.add.image(50 + (Math.floor(Math.random() * this.world.width)), this.world.centerY + 450 + (Math.floor(Math.random() * 100)), badWasteList[(Math.floor(Math.random() * badWasteList.length))]);
+            trash.anchor.setTo(0.5);
+            trash.scale.setTo(0.3);
+            trash.inputEnabled = true;
+            trash.events.onInputDown.add(this.choseBad, this);
+        }
+        
         
         
         //UI
@@ -131,6 +153,16 @@ BasicGame.GameE.prototype = {
         PLAYER_DATA.SCORE += amount;
         PLAYER_DATA.ROUND_SCORE += amount;
         scoreTab_txt.text = "Score " + PLAYER_DATA.ROUND_SCORE;
+    },
+    
+    choseGood: function (sprite) {
+        addScore(100);
+        sprite.destroy();
+    },
+    
+    choseBad: function(sprite) {
+        addScore(-100);
+        sprite.destroy();
     }
 
 };
