@@ -3,6 +3,11 @@
 //Gameplay logic
 var gameState = "play";
 
+//D
+var coral = null;
+var scubaMan = null;
+var fish = null;
+
 //UI
 var instructionsModal;
 var instructionsPlayButton;
@@ -50,9 +55,61 @@ BasicGame.GameD.prototype = {
         gameTimer = GAME_A.MAX_TIME[PLAYER_DATA.DIFFICULTY];
         
         //Setting
-        var levelBackground = this.add.image(this.world.centerX, this.world.centerY, 'GameBBackground');
+        var levelBackground = this.add.image(this.world.centerX, this.world.centerY, 'GameDBackground');
         levelBackground.anchor.setTo(0.5);
+        levelBackground.scale.setTo(0.6);
         
+        
+        //Coral
+        coral = this.add.physicsGroup();
+        for (var i = 1; i < 4; i++) {
+            var cor = null;
+            
+            if (i % 2) {
+                cor = coral.create(i * 550, this.world.centerY + 250, 'Coral1');
+                cor.scale.setTo(0.4);
+                cor.anchor.setTo(0.5);
+            }
+            else {
+                cor = coral.create(i * 550, this.world.centerY + 400, 'Coral2');
+                cor.scale.setTo(0.6);
+                cor.anchor.setTo(0.5);
+            }
+        }
+        
+        fish = this.add.physicsGroup();
+        for (var i = 0; i < 9; i++) {
+            var f = null;
+            
+            if (i < 3) {
+                f = fish.create(300 + Math.floor(Math.random() * (this.world.width - 300)), this.world.centerY + 100 + Math.floor(Math.random() * 600), 'YellowFish');
+                f.scale.setTo(0.2);
+                f.anchor.setTo(0.5);
+                f.moveSpeed = 1 + Math.floor(Math.random() * 7);
+            } else if (i < 6) {
+                f = fish.create(300 + Math.floor(Math.random() * (this.world.width - 300)), this.world.centerY + 100 + Math.floor(Math.random() * 600), 'BlueFish');
+                f.scale.setTo(0.05);
+                f.anchor.setTo(0.5);
+                f.moveSpeed = 1 + Math.floor(Math.random() * 7);
+            } else {
+                f = fish.create(300 + Math.floor(Math.random() * (this.world.width - 300)), this.world.centerY + 100 + Math.floor(Math.random() * 600), 'RedFish');
+                f.scale.setTo(0.05);
+                f.anchor.setTo(0.5);
+                f.moveSpeed = 1 + Math.floor(Math.random() * 7);
+            }
+        }
+        
+        //Player
+        this.physics.startSystem(Phaser.Physics.ARCADE);
+        scubaMan = this.add.sprite(100, this.world.centerY + 300, 'Scubaman');
+        scubaMan.anchor.setTo(0.5);
+        scubaMan.scale.setTo(0.07);
+        this.physics.arcade.enable(scubaMan);
+        scubaMan.inputEnabled = true;
+        scubaMan.input.enableDrag(true);
+        //scubaMan.body.collideWorldBounds = true;
+        
+        //Fish
         
         //UI
         //Score
@@ -85,7 +142,7 @@ BasicGame.GameD.prototype = {
         //instructions
         instructionsModal = this.add.image(this.world.centerX, this.world.centerY, PLAYER_DATA.CURRENT_GAME + "Instructions");
         instructionsModal.anchor.setTo(0.5);
-        instructionsModal.scale.setTo(0.7);
+        //instructionsModal.scale.setTo(0.7);
         
         //Hand
         instructionsPlayButton = thisGame.add.button(thisGame.world.centerX - 8, this.world.centerY + 380, 'Papel4', this.playGame, this);
@@ -96,6 +153,8 @@ BasicGame.GameD.prototype = {
         instructionsPlayButton_txt = this.game.add.text(instructionsPlayButton.x, instructionsPlayButton.y, "INICIAR", {font:"55px ZombieChecklist", fill:"#000000"});
         instructionsPlayButton_txt.anchor.setTo(0.5);
         instructionsPlayButton_txt.align = 'center';
+        
+        this.addScore(1000);
 	},
     
     playGame: function() {
@@ -109,28 +168,56 @@ BasicGame.GameD.prototype = {
         
         if (gameState == "play"){
             
+            this.physics.arcade.overlap(scubaMan, coral, this.overlapEcosystem, null, this);
+            this.physics.arcade.overlap(scubaMan, fish, this.overlapEcosystem, null, this);
+            
             gameTimer -= this.time.elapsed/1000;
             cropRect.width = barWidth * ((gameTimer / GAME_A.MAX_TIME[PLAYER_DATA.DIFFICULTY]));
             timerBar.crop(cropRect);
             timerBar.updateCrop();
             
             if (gameTimer <= 0){
+                addScore(-500);
                 gameState = "lose";
                 gameTimer = 0;
                 timerBar.scale.setTo(0, 0);
+            }
+            
+            //Move fish
+            for (var i = fish.children.length - 1; i >= 0; i--) {
+                
+                console.log(fish.children[i].moveSpeed);
+                
+                fish.children[i].x -= fish.children[i].moveSpeed;
+                
+                if (fish.children[i].x < -100) {
+                    fish.children[i].x = this.world.width;
+                }
+            }
+            
+            if (scubaMan.x > this.world.width - 200) {
+                gameState = "lose";
             }
         }
         else if (gameState == "lose"){
             this.state.start('Outcome', true);
         }
         
-        
+        if (scubaMan.y < this.world.centerY + 100) {
+            scubaMan.y = this.world.centerY + 100;
+        }
 	},
     
     addScore: function (amount) {
         PLAYER_DATA.SCORE += amount;
         PLAYER_DATA.ROUND_SCORE += amount;
         scoreTab_txt.text = "Score " + PLAYER_DATA.ROUND_SCORE;
+    },
+    
+    overlapEcosystem: function (player, object) {
+        if (gameState == "play") {
+            this.addScore(-1);
+        }
     }
 
 };

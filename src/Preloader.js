@@ -78,6 +78,19 @@ BasicGame.Preloader.prototype = {
         this.load.image('eco1', 'assets/GameC/Links/eco2.png');
         this.load.image('eco2', 'assets/GameC/Links/eco3.png');
         
+        //Game D
+        this.load.image('GameDBackground', 'assets/GameD/Links/background.jpg');
+        this.load.image('GameDInstructions', 'assets/GameD/Links/instructions.png');
+        this.load.image('Coral1', 'assets/GameA/Links/monticulo2.png');
+        this.load.image('Coral2', 'assets/GameA/Links/monticulo3.png');
+        this.load.image('Scubaman', 'assets/GameD/Links/buzo.png');
+        this.load.image('YellowFish', 'assets/GameD/Links/pezamarillo.png');
+        this.load.image('BlueFish', 'assets/GameD/Links/pezacostado.png');
+        this.load.image('RedFish', 'assets/GameD/Links/pezrojo.png')
+        
+        //Game E
+        this.load.image('GameEInstructions', 'assets/GameE/Links/instructions.png');
+        
         
         //Outcome
         this.load.image('Maskin', 'assets/Outcome/Links/maskin.png');
