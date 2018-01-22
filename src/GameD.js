@@ -186,7 +186,6 @@ BasicGame.GameD.prototype = {
             //Move fish
             for (var i = fish.children.length - 1; i >= 0; i--) {
                 
-                console.log(fish.children[i].moveSpeed);
                 
                 fish.children[i].x -= fish.children[i].moveSpeed;
                 

@@ -44,6 +44,8 @@ function goToNextGame() {
         console.log(PLAYER_DATA.CURRENT_GAME);
     
         thisGame.state.start(PLAYER_DATA.CURRENT_GAME, true);
+    } else {
+        ResetData();
     }
 }
 
@@ -70,6 +72,9 @@ function shuffle(array)
 function ResetData()
 {
     PLAYER_DATA.SCORE = 0;
+    PLAYER_DATA.GAME_INDEX = -1;
+    
+    thisGame.state.start('MainMenu', true);
 }
 
 BasicGame.Manager = function (game) {
