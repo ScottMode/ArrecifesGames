@@ -105,6 +105,16 @@ BasicGame.Preloader.prototype = {
         this.load.image('GameGInstructions', 'assets/GameG/Links/instructions.png');
         this.load.image('hitbox', 'assets/GameG/Links/hitbox.png');
         
+        //Game H
+        this.load.image('GameHBackground', 'assets/GameH/Links/background.jpg');
+        this.load.image('GameHInstructions', 'assets/GameH/Links/instructions.png');
+        this.load.image('goodButton', 'assets/GameH/Links/goodButton.png');
+        this.load.image('badButton', 'assets/GameH/Links/badButton.png');
+        
+        
+        //Game I
+        this.load.image('GameIInstructions', 'assets/GameI/Links/instructions.png');
+        
         
         //Outcome
         this.load.image('Maskin', 'assets/Outcome/Links/maskin.png');

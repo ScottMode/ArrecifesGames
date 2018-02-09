@@ -3,6 +3,13 @@
 //Gameplay logic
 var gameState = "play";
 
+//H
+var goodButton = null;
+var badButton = null;
+var centerPaper = null;
+var centerImage = null;
+var centerText = null;
+
 //UI
 var instructionsModal;
 var instructionsPlayButton;
@@ -49,6 +56,19 @@ BasicGame.GameH.prototype = {
         gameState = "intro";
         gameTimer = GAME_A.MAX_TIME[PLAYER_DATA.DIFFICULTY];
         
+        //Good/bad buttons
+        //Choice buttons
+        goodButton = this.add.button(this.world.centerX + 100, this.world.centerY + 200, 'goodButton', this.pickGood, this);
+        goodButton.anchor.setTo(0.5);
+        goodButton.correct = false;
+        
+        badButton = this.add.button(this.world.centerX - 100, this.world.centerY + 200, 'badButton', this.pickBad, this);
+        badButton.anchor.setTo(0.5);
+        badButton.correct = false;
+        
+        this.setButtonChoices();
+        
+        
         //Preset
         //Setting
         var levelBackground = this.add.image(this.world.centerX, this.world.centerY, 'GameHBackground');
@@ -82,7 +102,7 @@ BasicGame.GameH.prototype = {
         //Hand
         instructionsPlayButton = thisGame.add.button(thisGame.world.centerX - 8, this.world.centerY + 380, 'Papel4', this.playGame, this);
         instructionsPlayButton.anchor.setTo(0.5);
-        instructionsPlayButton.scale.setTo(0.4);
+        instructionsPlayButton.scale.setTo(0.5);
         instructionsPlayButton.input.useHandCursor = true;
         instructionsPlayButton.angle -= 80;
         instructionsPlayButton_txt = this.game.add.text(instructionsPlayButton.x, instructionsPlayButton.y, "INICIAR", {font:"55px ZombieChecklist", fill:"#000000"});
@@ -121,5 +141,46 @@ BasicGame.GameH.prototype = {
         PLAYER_DATA.SCORE += amount;
         PLAYER_DATA.ROUND_SCORE += amount;
         scoreTab_txt.text = "Score " + PLAYER_DATA.ROUND_SCORE;
+    },
+    
+    pickGood: function (button) {
+        if (goodButton.correct) {
+            this.addScore(200);
+        } else {
+            this.addScore(-200);
+        }
+        
+        this.setButtonChoices();
+    },
+    
+    pickBad: function (button) {
+        if (badButton.correct) {
+            this.addScore(200);
+        } else {
+            this.addScore(-200);
+        }
+        
+        this.setButtonChoices();
+    },
+    
+    setButtonChoices: function () {
+        
+        /*var isRight = !!+(Math.floor(Math.random() * 2));
+        
+        rightChoiceButton.correct = isRight;
+        leftChoiceButton.correct = !isRight;
+        
+        if (isRight) {
+            rightChoiceButton.choice = goodChoiceList[(Math.floor(Math.random() * goodChoiceList.length))];
+            leftChoiceButton.choice = badChoiceList[(Math.floor(Math.random() * badChoiceList.length))];
+        } else {
+            leftChoiceButton.choice = goodChoiceList[(Math.floor(Math.random() * goodChoiceList.length))];
+            rightChoiceButton.choice = badChoiceList[(Math.floor(Math.random() * badChoiceList.length))];
+        }
+        
+        rightChoiceImage.loadTexture(rightChoiceButton.choice);
+        leftChoiceImage.loadTexture(leftChoiceButton.choice);
+        rightChoiceButton_txt.text = rightChoiceButton.choice;
+        leftChoiceButton_txt.text = leftChoiceButton.choice;*/
     }
 };
