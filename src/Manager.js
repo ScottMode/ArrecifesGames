@@ -14,7 +14,7 @@ var PLAYER_DATA = {
     ROUND_SCORE: 0,
     CURRENT_GAME: "GameB",
     DIFFICULTY: 1, //0-2
-    GAME_LIST: ["GameA", "GameB", "GameC", "GameD", "GameE"],
+    GAME_LIST: ["GameF", "GameG", "GameG", "GameG", "GameF"], 
     GAME_INDEX: -1
 };
 

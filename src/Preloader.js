@@ -13,13 +13,6 @@ BasicGame.Preloader.prototype = {
 
 	preload: function () {
         
-        /*loading_txt = this.add.text(this.world.centerX, this.world.centerY, 'Loading...');
-        loading_txt.anchor.setTo(0.5);
-        loading_txt.fill = '#FFFFFF';
-        loading_txt.font = 'Zombie';
-        loading_txt.fontSize = 50;
-        loading_txt.align = 'center';*/
-        
         var loading_txt = this.game.add.text(this.world.centerX, this.world.centerY, "Loading...", {font:"40px ZombieChecklist", fill:"#FFFFFF"});
         loading_txt.anchor.setTo(0.5);
         loading_txt.fill = '#FFFFFF';
@@ -97,6 +90,20 @@ BasicGame.Preloader.prototype = {
         for (var i = 0; i < goodWasteList.length; i++) {
             this.load.image(goodWasteList[i], 'assets/GameE/Links/' + goodWasteList[i] + '.png');
         }
+        
+        //Game F
+        this.load.image('GameFInstructions', 'assets/GameF/Links/instructions.png');
+        this.load.image('cruiseShip', 'assets/GameF/Links/crucero.png');
+        this.load.image('goodFish1', 'assets/GameF/Links/peztecni.png');
+        this.load.image('goodFish2', 'assets/GameF/Links/duo.png');
+        this.load.image('goodFish3', 'assets/GameF/Links/cuarteto.png');
+        this.load.image('badFish1', 'assets/GameF/Links/badFish1.png');
+        this.load.image('badFish2', 'assets/GameF/Links/badFish2.png');
+        
+        //Game G
+        this.load.image('GameGBackground', 'assets/GameG/Links/background.jpg');
+        this.load.image('GameGInstructions', 'assets/GameG/Links/instructions.png');
+        this.load.image('hitbox', 'assets/GameG/Links/hitbox.png');
         
         
         //Outcome
