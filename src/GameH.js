@@ -56,23 +56,41 @@ BasicGame.GameH.prototype = {
         gameState = "intro";
         gameTimer = GAME_A.MAX_TIME[PLAYER_DATA.DIFFICULTY];
         
-        //Good/bad buttons
-        //Choice buttons
-        goodButton = this.add.button(this.world.centerX + 100, this.world.centerY + 200, 'goodButton', this.pickGood, this);
-        goodButton.anchor.setTo(0.5);
-        goodButton.correct = false;
-        
-        badButton = this.add.button(this.world.centerX - 100, this.world.centerY + 200, 'badButton', this.pickBad, this);
-        badButton.anchor.setTo(0.5);
-        badButton.correct = false;
-        
-        this.setButtonChoices();
-        
-        
         //Preset
         //Setting
         var levelBackground = this.add.image(this.world.centerX, this.world.centerY, 'GameHBackground');
         levelBackground.anchor.setTo(0.5);
+        
+        //Good/bad buttons
+        //Choice buttons
+        goodButton = this.add.button(this.world.centerX + 150, this.world.centerY + 400, 'goodButton', this.pickGood, this);
+        goodButton.anchor.setTo(0.5);
+        goodButton.scale.setTo(0.2);
+        goodButton.correct = false;
+        
+        badButton = this.add.button(this.world.centerX - 150, this.world.centerY + 400, 'badButton', this.pickBad, this);
+        badButton.anchor.setTo(0.5);
+        badButton.scale.setTo(0.2);
+        badButton.correct = false;
+        
+        
+        //Center paper, image, text
+        centerPaper = this.add.image(this.world.centerX, this.world.centerY, 'Papel2');
+        centerPaper.anchor.setTo(0.5);
+        centerPaper.scale.setTo(0.5);
+        centerPaper.angle -= 173;
+        
+        centerImage = this.add.image(this.world.centerX, this.world.centerY, 'Papel2');
+        centerImage.anchor.setTo(0.5);
+        centerImage.scale.setTo(0.3);
+        
+        centerText = this.game.add.text(this.world.centerX, this.world.centerY + 200, "text", {font:"55px ZombieChecklist", fill:"#000000"});
+        centerText.anchor.setTo(0.5);
+        centerText.align = 'center';
+        
+        this.setButtonChoices();
+        
+        
         //Score
         scoreTab = this.add.image(this.world.width - 140, 50, 'Papel4');
         scoreTab.anchor.setTo(0.5);
@@ -165,22 +183,30 @@ BasicGame.GameH.prototype = {
     
     setButtonChoices: function () {
         
-        /*var isRight = !!+(Math.floor(Math.random() * 2));
+        var isGood = !!+(Math.floor(Math.random() * 2));
         
-        rightChoiceButton.correct = isRight;
-        leftChoiceButton.correct = !isRight;
+        goodButton.correct = isGood;
+        badButton.correct = !isGood;
         
-        if (isRight) {
-            rightChoiceButton.choice = goodChoiceList[(Math.floor(Math.random() * goodChoiceList.length))];
-            leftChoiceButton.choice = badChoiceList[(Math.floor(Math.random() * badChoiceList.length))];
+        if (isGood) {
+            var newChoice = goodHList[(Math.floor(Math.random() * goodHList.length))];
+            
+            while (newChoice == centerImage.choice) {
+                newChoice = goodHList[(Math.floor(Math.random() * goodHList.length))];
+            }
+            
+            centerImage.choice = newChoice;
         } else {
-            leftChoiceButton.choice = goodChoiceList[(Math.floor(Math.random() * goodChoiceList.length))];
-            rightChoiceButton.choice = badChoiceList[(Math.floor(Math.random() * badChoiceList.length))];
+            var newChoice = badHList[(Math.floor(Math.random() * badHList.length))];
+            
+            while (newChoice == centerImage.choice) {
+                newChoice = badHList[(Math.floor(Math.random() * badHList.length))];
+            }
+            
+            centerImage.choice = newChoice;
         }
         
-        rightChoiceImage.loadTexture(rightChoiceButton.choice);
-        leftChoiceImage.loadTexture(leftChoiceButton.choice);
-        rightChoiceButton_txt.text = rightChoiceButton.choice;
-        leftChoiceButton_txt.text = leftChoiceButton.choice;*/
+        centerImage.loadTexture(centerImage.choice);
+        centerText.text = centerImage.choice;
     }
 };

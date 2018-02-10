@@ -108,12 +108,19 @@ BasicGame.Preloader.prototype = {
         //Game H
         this.load.image('GameHBackground', 'assets/GameH/Links/background.jpg');
         this.load.image('GameHInstructions', 'assets/GameH/Links/instructions.png');
-        this.load.image('goodButton', 'assets/GameH/Links/goodButton.png');
-        this.load.image('badButton', 'assets/GameH/Links/badButton.png');
-        
+        this.load.image('goodButton', 'assets/GameH/Links/happyButton.png');
+        this.load.image('badButton', 'assets/GameH/Links/sadButton.png');
+        for (var i = 0; i < goodHList.length; i++) {
+            this.load.image(goodHList[i], 'assets/GameH/Links/' + goodHList[i] + '.png');
+        }
+        for (var i = 0; i < badHList.length; i++) {
+            this.load.image(badHList[i], 'assets/GameH/Links/' + badHList[i] + '.png');
+        }
         
         //Game I
         this.load.image('GameIInstructions', 'assets/GameI/Links/instructions.png');
+        this.load.image('GameIBackground', 'assets/GameI/Links/background.jpg');
+        this.load.image('barI', 'assets/GameI/Links/bar.png');
         
         
         //Outcome

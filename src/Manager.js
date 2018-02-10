@@ -8,13 +8,16 @@ var badChoiceList = ["marconchita", "destapador", 'frasco', 'collar', "barcobote
 var goodWasteList = ["trash1", "trash2", "trash3", "trash4", "trash5"];
 var badWasteList = ["reef1", "reef2", "reef3"];
 
+var goodHList = ["bolsa", "separar basura", "lavarauto", "popote", "reutilizables", "ropatendida"];
+var badHList = ["soquet", "trenligero", "troca", "unicel"];
+
 
 var PLAYER_DATA = {
     SCORE: 0,
     ROUND_SCORE: 0,
     CURRENT_GAME: "GameB",
     DIFFICULTY: 1, //0-2
-    GAME_LIST: ["GameH", "GameH", "GameH", "GameH", "GameH"], 
+    GAME_LIST: ["GameA", "GameB", "GameC", "GameD", "GameE", "GameF", "GameG", "GameH", "GameI"], 
     GAME_INDEX: -1
 };
 

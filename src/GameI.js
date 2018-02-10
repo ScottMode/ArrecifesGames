@@ -3,6 +3,15 @@
 //Gameplay logic
 var gameState = "play";
 
+//I
+var bar = null;
+var hand = null;
+
+//Logic vars
+var handSpeed = 30;
+var handLimit = 0;
+var handZones = [150, 400];
+
 //UI
 var instructionsModal;
 var instructionsPlayButton;
@@ -53,6 +62,23 @@ BasicGame.GameI.prototype = {
         //Setting
         var levelBackground = this.add.image(this.world.centerX, this.world.centerY, 'GameIBackground');
         levelBackground.anchor.setTo(0.5);
+        levelBackground.scale.setTo(1.2);
+        
+        
+        //Bar
+        bar = this.add.image(this.world.centerX, this.world.centerY, 'barI');
+        bar.anchor.setTo(0.5);
+        //bar.scale.setTo(0.5);
+        
+        
+        //Mano
+        hand = this.add.sprite(bar.x, bar.y, 'Mano');
+        hand.anchor.setTo(0.5, 0);
+        hand.scale.setTo(0.2);
+        handLimit = bar.width / 2;
+        
+        
+        
         //Score
         scoreTab = this.add.image(this.world.width - 140, 50, 'Papel4');
         scoreTab.anchor.setTo(0.5);
@@ -74,13 +100,13 @@ BasicGame.GameI.prototype = {
         timerBar.cropEnabled = true;
         barWidth = timerBar.width;
         cropRect = new Phaser.Rectangle(0, 0, timerBar.width, timerBar.height);
-        timerBar.scale.setTo(0.4, 0.5)
+        timerBar.scale.setTo(0.4, 0.5);
         //instructions
         instructionsModal = this.add.image(this.world.centerX, this.world.centerY, PLAYER_DATA.CURRENT_GAME + "Instructions");
         instructionsModal.anchor.setTo(0.5);
         instructionsModal.scale.setTo(0.7);
         //Hand
-        instructionsPlayButton = thisGame.add.button(thisGame.world.centerX - 8, this.world.centerY + 380, 'Papel4', this.playGame, this);
+        instructionsPlayButton = thisGame.add.button(thisGame.world.centerX - 8, this.world.centerY + 373, 'Papel4', this.playGame, this);
         instructionsPlayButton.anchor.setTo(0.5);
         instructionsPlayButton.scale.setTo(0.4);
         instructionsPlayButton.input.useHandCursor = true;
@@ -100,6 +126,30 @@ BasicGame.GameI.prototype = {
 	update: function () {
         
         if (gameState == "play"){
+            
+            //I Logic
+            hand.x += handSpeed;
+            
+            if (hand.x >= bar.x + handLimit || hand.x <= bar.x - handLimit) {
+                handSpeed *= -1;
+            }
+            
+            if (this.input.activePointer.isDown)
+            {
+                //First tier
+                if (hand.x <= bar.x + handZones[0] && hand.x >= bar.x - handZones[0]) {
+                    addScore(1000);
+                }
+                else if (hand.x <= bar.x + handZones[1] && hand.x >= bar.x - handZones[1]) {
+                    addScore(0);
+                }
+                else {
+                    addScore(-500);
+                }
+                
+                gameState = "lose";
+            }
+            
             
             gameTimer -= this.time.elapsed/1000;
             cropRect.width = barWidth * ((gameTimer / GAME_A.MAX_TIME[PLAYER_DATA.DIFFICULTY]));
