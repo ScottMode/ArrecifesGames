@@ -57,8 +57,8 @@ BasicGame.GameE.prototype = {
         
         
         //Trash
-        for (var i = 0; i < 20; i++) {
-            var trash = this.add.image(50 + (Math.floor(Math.random() * this.world.width)), this.world.centerY + 300 + (Math.floor(Math.random() * 100)), goodWasteList[(Math.floor(Math.random() * goodWasteList.length))]);
+        for (var i = 0; i < 25; i++) {
+            var trash = this.add.image(50 + (Math.floor(Math.random() * this.world.width)), this.world.centerY + 280 + (Math.floor(Math.random() * 200)), goodWasteList[(Math.floor(Math.random() * goodWasteList.length))]);
             trash.anchor.setTo(0.5);
             trash.scale.setTo(0.4);
             trash.inputEnabled = true;
@@ -66,10 +66,20 @@ BasicGame.GameE.prototype = {
         }
         
         //Reef
-        for (var i = 0; i < 10; i++) {
-            var trash = this.add.image(50 + (Math.floor(Math.random() * this.world.width)), this.world.centerY + 450 + (Math.floor(Math.random() * 100)), badWasteList[(Math.floor(Math.random() * badWasteList.length))]);
+        for (var i = 0; i < 22; i++) {
+            var type = badWasteList[(Math.floor(Math.random() * badWasteList.length))];
+            var trash = this.add.image(50 + (Math.floor(Math.random() * this.world.width)), this.world.centerY + 380 + (Math.floor(Math.random() * 200)), type);
+            if (type == "reef1" || type == "reef2" || trash == "reef3") {
+                trash.scale.setTo(0.3);
+            }
+            else if (type == "redFish") {
+                trash.scale.setTo(0.05);
+            }
+            else {
+                trash.scale.setTo(0.1);
+            }
             trash.anchor.setTo(0.5);
-            trash.scale.setTo(0.3);
+            
             trash.inputEnabled = true;
             trash.events.onInputDown.add(this.choseBad, this);
         }

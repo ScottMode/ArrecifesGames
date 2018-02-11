@@ -168,6 +168,8 @@ BasicGame.GameD.prototype = {
         
         if (gameState == "play"){
             
+            scubaMan.tint = 0xffffff;
+            
             this.physics.arcade.overlap(scubaMan, coral, this.overlapEcosystem, null, this);
             this.physics.arcade.overlap(scubaMan, fish, this.overlapEcosystem, null, this);
             
@@ -216,6 +218,8 @@ BasicGame.GameD.prototype = {
     overlapEcosystem: function (player, object) {
         if (gameState == "play") {
             this.addScore(-1);
+            
+            scubaMan.tint = Math.floor(Math.random() * 10) * 0xff0000;
         }
     }
 

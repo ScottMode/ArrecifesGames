@@ -2,11 +2,11 @@
 
 var stateTarget = '';
 
-var goodChoiceList = ["fruta", "chanclas", "taza", "playera", "sombrero", "pareo", "pulsera"];
-var badChoiceList = ["marconchita", "destapador", 'frasco', 'collar', "barcobotella", "huevos", "concha"];
+var goodChoiceList = ["fruta", "chanclas", "taza", "playera", "sombrero", "pareo", "pulsera", "mapa"];
+var badChoiceList = ["marco decorative", "destapador", 'frasco', 'collar', "barcobotella", "huevos", "conchitas"];
 
 var goodWasteList = ["trash1", "trash2", "trash3", "trash4", "trash5"];
-var badWasteList = ["reef1", "reef2", "reef3"];
+var badWasteList = ["reef1", "reef2", "reef3", "goodFish1", "YellowFish", "RedFish"];
 
 var goodHList = ["bolsa", "separar basura", "lavarauto", "popote", "reutilizables", "ropatendida"];
 var badHList = ["soquet", "trenligero", "troca", "unicel"];
@@ -22,7 +22,7 @@ var PLAYER_DATA = {
 };
 
 var GAME_A = {
-    TAPS_NEEDED: [20, 20, 20],
+    TAPS_NEEDED: [11, 11, 11],
     MAX_TIME: [20, 15, 10],
     TAP_AWARD: [100, 100, 100]
 };

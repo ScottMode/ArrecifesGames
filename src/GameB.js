@@ -11,6 +11,7 @@ var rightChoiceButton_txt;
 var leftChoiceButton;
 var leftChoiceImage;
 var leftChoiceButton_txt;
+var answer_txt = null;
 
 //UI
 var instructionsModal;
@@ -72,6 +73,14 @@ BasicGame.GameB.prototype = {
         vsButton_txt.anchor.setTo(0.5);
         vsButton_txt.align = 'center';
         
+        
+        //Answer text
+        answer_txt = this.game.add.text(this.world.centerX, this.world.centerY - 120, "correct", {font:"50px ZombieChecklist", fill:"#000000"});
+        answer_txt.anchor.setTo(0.5);
+        answer_txt.align = 'center';
+        answer_txt.alpha = 0;
+        
+        
         //Finger
         var finger = this.add.image(this.world.centerX, this.world.centerY + 200, 'Mano');
         finger.anchor.setTo(0.5, 0.5);
@@ -83,7 +92,7 @@ BasicGame.GameB.prototype = {
         rightChoiceButton.anchor.setTo(0.5);
         rightChoiceButton.correct = false;
         rightChoiceButton.choice = "";
-        rightChoiceButton_txt = this.game.add.text(rightChoiceButton.x, rightChoiceButton.y + 75, "", {font:"40px ZombieChecklist", fill:"#000000"});
+        rightChoiceButton_txt = this.game.add.text(rightChoiceButton.x, rightChoiceButton.y + 75, "", {font:"36px ZombieChecklist", fill:"#000000"});
         rightChoiceButton_txt.anchor.setTo(0.5);
         rightChoiceButton_txt.align = 'center';
         rightChoiceButton_txt.angle += 5;
@@ -95,7 +104,7 @@ BasicGame.GameB.prototype = {
         leftChoiceButton.anchor.setTo(0.5);
         leftChoiceButton.correct = false;
         leftChoiceButton.choice = "";
-        leftChoiceButton_txt = this.game.add.text(leftChoiceButton.x, leftChoiceButton.y + 75, "", {font:"40px ZombieChecklist", fill:"#000000"});
+        leftChoiceButton_txt = this.game.add.text(leftChoiceButton.x, leftChoiceButton.y + 75, "", {font:"36px ZombieChecklist", fill:"#000000"});
         leftChoiceButton_txt.anchor.setTo(0.5);
         leftChoiceButton_txt.align = 'center';
         leftChoiceButton_txt.angle -= 5;
@@ -167,6 +176,14 @@ BasicGame.GameB.prototype = {
             timerBar.crop(cropRect);
             timerBar.updateCrop();
             
+            if (answer_txt.alpha > 0) {
+                answer_txt.alpha -= 0.5 * (this.time.elapsed/1000);
+                
+                if (answer_txt.alpha < 0) {
+                    answer_txt.alpha = 0;
+                }
+            }
+            
             if (gameTimer <= 0){
                 gameState = "lose";
                 gameTimer = 0;
@@ -182,29 +199,43 @@ BasicGame.GameB.prototype = {
 	},
     
     addScore: function (amount) {
+        
+        if  (amount > 0) {
+            answer_txt.text = "corrigir!";
+        }
+        else {
+            answer_txt.text = "incorreta";
+        }
+        
+        answer_txt.alpha = 1;
+        
         PLAYER_DATA.SCORE += amount;
         PLAYER_DATA.ROUND_SCORE += amount;
         scoreTab_txt.text = "Score " + PLAYER_DATA.ROUND_SCORE;
     },
     
     pickRight: function (button) {
-        if (rightChoiceButton.correct) {
-            this.addScore(200);
-        } else {
-            this.addScore(-200);
+        if (gameState == "play") {
+            if (rightChoiceButton.correct) {
+                this.addScore(200);
+            } else {
+                this.addScore(-200);
+            }
+
+            this.setButtonChoices();
         }
-        
-        this.setButtonChoices();
     },
     
     pickLeft: function (button) {
-        if (leftChoiceButton.correct) {
-            this.addScore(200);
-        } else {
-            this.addScore(-200);
+        if (gameState == "play") {
+            if (leftChoiceButton.correct) {
+                this.addScore(200);
+            } else {
+                this.addScore(-200);
+            }
+
+            this.setButtonChoices();
         }
-        
-        this.setButtonChoices();
     },
     
     setButtonChoices: function () {
