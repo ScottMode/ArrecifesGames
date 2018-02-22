@@ -2,55 +2,16 @@
 
 var stateTarget = '';
 
-var goodChoiceList = ["fruta", "chanclas", "taza", "playera", "sombrero", "pareo", "pulsera", "mapa"];
-var badChoiceList = ["marco decorative", "destapador", 'frasco', 'collar', "barcobotella", "huevos", "conchitas"];
-
-var goodWasteList = ["trash1", "trash2", "trash3", "trash4", "trash5"];
-var badWasteList = ["reef1", "reef2", "reef3", "goodFish1", "YellowFish", "RedFish"];
-
-var goodHList = ["bolsa", "separar basura", "lavarauto", "popote", "reutilizables", "ropatendida"];
-var badHList = ["soquet", "trenligero", "troca", "unicel"];
+var boardCount = 30;
+var currentBoard = 0;
 
 
-var PLAYER_DATA = {
-    SCORE: 0,
-    ROUND_SCORE: 0,
-    CURRENT_GAME: "GameB",
-    DIFFICULTY: 1, //0-2
-    GAME_LIST: ["GameA", "GameB", "GameC", "GameD", "GameE", "GameF", "GameG", "GameH", "GameI"], 
-    GAME_INDEX: -1
-};
 
-var GAME_A = {
-    TAPS_NEEDED: [11, 11, 11],
-    MAX_TIME: [20, 15, 10],
-    TAP_AWARD: [100, 100, 100]
-};
 
-function createRandomGameList() {
-    
-    PLAYER_DATA.GAME_LIST = shuffle(PLAYER_DATA.GAME_LIST);
-    
-    goToNextGame();
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function goToNextGame() {
-    
-    PLAYER_DATA.GAME_INDEX++;
-    
-    if (PLAYER_DATA.GAME_INDEX < 5) {
-        //else do something else
-        PLAYER_DATA.CURRENT_GAME = PLAYER_DATA.GAME_LIST[PLAYER_DATA.GAME_INDEX];
-    
-        PLAYER_DATA.ROUND_SCORE = 0;
-        
-        console.log(PLAYER_DATA.CURRENT_GAME);
-    
-        thisGame.state.start(PLAYER_DATA.CURRENT_GAME, true);
-    } else {
-        ResetData();
-    }
-}
 
 function shuffle(array) 
 {
@@ -70,14 +31,6 @@ function shuffle(array)
   }
 
   return array;
-}
-
-function ResetData()
-{
-    PLAYER_DATA.SCORE = 0;
-    PLAYER_DATA.GAME_INDEX = -1;
-    
-    thisGame.state.start('MainMenu', true);
 }
 
 BasicGame.Manager = function (game) {
@@ -101,18 +54,15 @@ BasicGame.Manager.prototype = {
 function setButton(button, text, size, buttonSound)
 {
     button.anchor.setTo(0.5, 0.5);
-    //button.forceOut = true;
     button.input.useHandCursor = true;
+    
     text.fontSize = size * gm.scaleP;
-
     text.align = 'center';
-    text.updateText();
-    text.x = button.x - (text.width / 2);
-    text.y = button.y - (text.height / 1.5);
+    text.anchor.setTo(0.5);
     text.fill = '#ffffff';
     
     button.width = text.width + 50 * gm.scaleP;
-	button.height = text.height + 45 * gm.scaleP;
+	button.height = text.height + 30 * gm.scaleP;
 }
 
 //TEXT CREATION

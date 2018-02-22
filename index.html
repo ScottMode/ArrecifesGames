@@ -10,26 +10,13 @@ var gm = {
     dimensionsX: 1920, //960 1024
     dimensionsY: 1080, //768 672
     font: null,
-    
-    //SOUND
-    music: null,
-    musicVolume: 0.8,
-    effectVolume: 1,
-    nextSound: null,
-    backSound: null,
-    fireSound: null,
-    enemyDieSound: null,
 
     orientated: false
 };
-    
-var sfx = {
-    fire: null
-}
 
 </script>
 <head>
-	<title>Javier</title>
+	<title>Spelling Bee</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="chrome=1, IE=9">
 	<meta name="format-detection" content="telephone=no">
@@ -37,7 +24,7 @@ var sfx = {
 	<meta name="robots" content="noindex,nofollow" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-	<meta name="apple-mobile-web-app-title" content="Javier">
+	<meta name="apple-mobile-web-app-title" content="Spelling Bee">
 	<meta name="viewport" content="initial-scale=1 maximum-scale=1 user-scalable=0 minimal-ui shrink-to-fit=no" />
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 	<!-- non-retina iPhone pre iOS 7 -->
@@ -64,17 +51,7 @@ var sfx = {
 	<script src="src/Boot.js"></script>
 	<script src="src/Preloader.js"></script>
 	<script src="src/MainMenu.js"></script>
-	<script src="src/GameA.js"></script>
-    <script src="src/GameB.js"></script>
-    <script src="src/GameC.js"></script>
-    <script src="src/GameD.js"></script>
-    <script src="src/GameE.js"></script>
-    <script src="src/GameF.js"></script>
-    <script src="src/GameG.js"></script>
-    <script src="src/GameH.js"></script>
-    <script src="src/GameI.js"></script>
-    <script src="src/GameJ.js"></script>
-    <script src="src/Outcome.js"></script>
+	<script src="src/Board.js"></script>
     <script src="src/Manager.js"></script>
 </head>
 <body>
@@ -96,17 +73,7 @@ var sfx = {
 	game.state.add('Boot', BasicGame.Boot);
 	game.state.add('Preloader', BasicGame.Preloader);
 	game.state.add('MainMenu', BasicGame.MainMenu);
-	game.state.add('GameA', BasicGame.GameA);
-    game.state.add('GameB', BasicGame.GameB);
-    game.state.add('GameC', BasicGame.GameC);
-    game.state.add('GameD', BasicGame.GameD);
-    game.state.add('GameE', BasicGame.GameE);
-    game.state.add('GameF', BasicGame.GameF);
-    game.state.add('GameG', BasicGame.GameG);
-    game.state.add('GameH', BasicGame.GameH);
-    game.state.add('GameI', BasicGame.GameI);
-    game.state.add('GameJ', BasicGame.GameJ);
-    game.state.add('Outcome', BasicGame.Outcome);
+	game.state.add('Board', BasicGame.Board);
     game.state.add('Manager', BasicGame.Manager)
 
 	//	Now start the Boot state.

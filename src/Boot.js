@@ -25,6 +25,7 @@ BasicGame.Boot.prototype = {
         this.scale.setMinMax(480, 260, 1920, 1080);
         this.scale.pageAlignHorizontally = true;
         this.scale.pageAlignVertically = true;
+        this.stage.backgroundColor = "#FFFFFF";
 
         if (!this.game.device.desktop)
         {
@@ -44,8 +45,7 @@ BasicGame.Boot.prototype = {
         /*this.load.bitmapFont('walter', 'assets/walter_0.png', 'assets/walter.fnt');
         this.load.script('webfont', '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js');*/
         
-        this.game.add.text(0, 0, "hack", {font:"1px ZombieChecklist", fill:"#FFFFFF"});
-        this.game.add.text(0, 0, "hack", {font:"1px Moon Flower Bold", fill:"#FFFFFF"});
+        //this.game.add.text(0, 0, "hack", {font:"1px ZombieChecklist", fill:"#FFFFFF"});
     },
 
     create: function () {
